@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { FloatingDoc } from "@/components/floating-doc";
+import FloatingDoc  from "@/components/floating-doc";
 import { AboutMe } from "@/components/about";
 import { MyTimeline } from "@/components/timeline";
 import { Skills } from "@/components/skills";
-import { Projects } from "@/components/projects";
+import Projects from "@/components/projects";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import Particles from "@/components/ui/particles";
@@ -55,7 +55,7 @@ export default function Home() {
           color="#c2f3ff"
         />
         <FloatingDoc />
-        <main className="container relative z-10 mx-auto px-4 py-8">
+        <main className="container relative z-10 mx-auto px-4">
           <AboutMe />
           <MyTimeline />
           <Skills />

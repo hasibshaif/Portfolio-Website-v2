@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import BoxReveal from "./ui/box-reveal";
 import ShimmerButton from "./ui/shimmer-button";
+import { LinkPreview } from "./ui/link-preview";
 
 export function AboutMe() {
   return (
@@ -50,22 +51,29 @@ export function AboutMe() {
                 </div>
               </BoxReveal>
 
-              {/* Resume button to the right */}
+              {/* Resume button with link preview */}
               <div className="self-start md:self-center">
-                <ShimmerButton
-                  className="relative overflow-hidden text-white px-6 py-3 rounded-lg bg-gradient-to-br from-black to-gray-800 hover:gradient-to-bl hover:from-gray-800 hover:to-black"
-                  shimmerColor="#00aaff"
-                  shimmerSize="0.2em"
-                  shimmerDuration="5s"
-                  onClick={() =>
-                    window.open(
-                      "/documents/Hasib Shaif - Resume.pdf",
-                      "_blank"
-                    )
-                  }
+                <LinkPreview
+                  url="/documents/Hasib Shaif - Resume.pdf"
+                  isStatic={true}
+                  imageSrc="/img/link-previews/about/resume-preview.PNG"
+                  className="flex flex-col items-center"
                 >
-                  Resume
-                </ShimmerButton>
+                  <ShimmerButton
+                    className="relative overflow-hidden text-white px-6 py-3 rounded-lg bg-gradient-to-br from-black to-gray-800 hover:gradient-to-bl hover:from-gray-800 hover:to-black"
+                    shimmerColor="#00aaff"
+                    shimmerSize="0.2em"
+                    shimmerDuration="5s"
+                    onClick={() =>
+                      window.open(
+                        "/documents/Hasib Shaif - Resume.pdf",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Resume
+                  </ShimmerButton>
+                </LinkPreview>
               </div>
             </div>
           </CardContent>

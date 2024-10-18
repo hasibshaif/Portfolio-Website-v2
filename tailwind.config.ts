@@ -11,7 +11,7 @@ const config = {
   prefix: "",
   theme: {
   	container: {
-  		center: 'true',
+  		center: true,
   		padding: '2rem',
   		screens: {
   			'2xl': '1400px'
@@ -59,6 +59,10 @@ const config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+			"bg-position": {
+				"0%": { backgroundPosition: "0% 50%" },
+				"100%": { backgroundPosition: "100% 50%" },
+			},
   			'accordion-down': {
   				from: {
   					height: '0'

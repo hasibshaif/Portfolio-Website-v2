@@ -2,8 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useTheme } from "next-themes";
-import Image from "next/legacy/image";
-
+import Image from "next/image"; // Import Image component from next/image
 import {
   Cloud,
   fetchSimpleIcons,
@@ -84,17 +83,18 @@ export default function IconCloud({ iconSlugs, customIcons = [] }: DynamicCloudP
       : [];
   
       const customIconElements = customIcons.map((customIcon) => (
-        <div key={customIcon.name} style={{ width: 42, height: 42, position: "relative" }}>
+        <div key={customIcon.name} style={{ width: 42, height: 42 }}>
           <Image
             src={customIcon.src}
             alt={customIcon.name}
-            width={42}
-            height={42}
-            style={{ objectFit: "contain" }} // Ensures the image fits properly
-            priority // Optional: Loads images with higher priority
+            width={42} // Explicit width
+            height={42} // Explicit height
+            priority // Optional: Load eagerly
+            style={{ objectFit: "contain" }} // Ensure proper scaling
           />
         </div>
       ));
+      
   
     return [...simpleIconElements, ...customIconElements];
   }, [data, theme, customIcons]);

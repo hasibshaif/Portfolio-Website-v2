@@ -60,6 +60,16 @@
   }
 }
 
+#skills {
+  background: rgba(0, 0, 0, 0.2); /* Same as the About section */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #ffffff;
+}
+
 .timeline-image {
   width: 50px;
   height: 50px;
