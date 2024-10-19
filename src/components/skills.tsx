@@ -72,7 +72,7 @@ export function Skills() {
             <div className="flex flex-col items-center">
               <AvatarList
                 data={frameworks}
-                heading="Frameworks"
+                heading="Frameworks & Libraries"
                 size="md"
               />
             </div>

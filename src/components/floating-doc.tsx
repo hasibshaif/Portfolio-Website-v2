@@ -1,4 +1,4 @@
-"use client";
+// FloatingDock.js (Modified to include email logic)
 
 import { useState } from "react";
 import AnimatedDock from "./animata/container/animated-dock";
@@ -6,11 +6,15 @@ import { Mail, Phone, Linkedin, Github } from "lucide-react";
 import EmailCard from "./animata/card/email-feature-card";
 
 export default function FloatingDock() {
-  const [isModalOpen, setModalOpen] = useState(false); // State to control modal visibility
+  const [isModalOpen, setModalOpen] = useState(false);
 
-  const openEmailModal = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent page navigation
-    setModalOpen(true); // Open the modal
+  const openEmailModal = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   const dockItems = [
@@ -27,8 +31,8 @@ export default function FloatingDock() {
     {
       title: "Email",
       icon: <Mail className="h-6 w-6" />,
-      href: "#", // Set href as placeholder
-      onClick: openEmailModal, // Attach the modal open handler
+      href: "#",
+      onClick: openEmailModal,
     },
     {
       title: "Phone",
@@ -39,20 +43,16 @@ export default function FloatingDock() {
 
   return (
     <>
-      {/* Floating Dock */}
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
         <AnimatedDock items={dockItems} largeClassName="w-[400px]" smallClassName="w-[200px]" />
       </div>
 
-      {/* Email Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="relative">
-            <EmailCard />
-
-            {/* Close Button */}
+            <EmailCard onClose={closeModal} />
             <button
-              onClick={() => setModalOpen(false)}
+              onClick={closeModal}
               className="absolute top-2 right-2 text-white bg-red-600 hover:bg-red-500 p-2 rounded-full"
             >
               ✕

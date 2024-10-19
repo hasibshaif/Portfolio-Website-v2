@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // projects.tsx
 import { ReactNode } from "react";
 import {
@@ -68,7 +69,7 @@ function BentoCard({
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.1 }}
                       className="bg-gray-800 text-white text-sm px-3 py-2 rounded-md shadow-lg"
                     >
                       You're already here
