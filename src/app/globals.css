@@ -60,15 +60,36 @@
   }
 }
 
-#skills {
-  background: rgba(0, 0, 0, 0.2); /* Same as the About section */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 h2 {
   color: #ffffff;
 }
+
+/* Customize scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;  /* Track background color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4b5563;  /* Scrollbar thumb color */
+  border-radius: 10px;
+  border: 2px solid #1e1e1e; /* Space around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2563eb; /* Change color on hover */
+}
+
+/* Customize scrollbar for Firefox */
+* {
+  scrollbar-width: thin;           /* Make the scrollbar thin */
+  scrollbar-color: #4b5563 #1e1e1e; /* Thumb color and track color */
+}
+
 
 .timeline-image {
   width: 50px;
@@ -99,8 +120,16 @@ h2 {
   transition: margin-left 0.3s ease; /* Smooth content shift */
 }
 
-a {
-  color: rgb(60, 142, 236);
+.my-timeline-links a,
+.my-timeline-links LinkPreview {
+  color: #1DA1F2 !important; /* Specific color for the links */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.my-timeline-links a:hover,
+.my-timeline-links LinkPreview:hover {
+  color: #ff4757 !important; /* Hover effect for the links */
 }
 
 a:hover img {

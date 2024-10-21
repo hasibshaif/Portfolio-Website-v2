@@ -14,48 +14,28 @@ import { Menu, X } from "lucide-react"; // Importing icons from lucide-react
 // Interface for props accepted by the AnimatedDock component
 interface AnimatedDockProps {
   items: { title: string; icon: React.ReactNode; href: string }[]; // Array of menu items
-  largeClassName?: string; // Optional class name for large dock
-  smallClassName?: string; // Optional class name for small dock
+  className?: string; // Optional class name for dock
 }
 
-// Main AnimatedDock component that renders both LargeDock and SmallDock
-export default function AnimatedDock({ items, largeClassName, smallClassName }: AnimatedDockProps) {
+// Main AnimatedDock component that renders the dock
+export default function AnimatedDock({ items, className }: AnimatedDockProps) {
+  const mouseXPosition = useMotionValue(Infinity);
+
   return (
-    <>
-      {/* Render LargeDock for larger screens */}
-      <LargeDock items={items} className={largeClassName} />
-      {/* Render SmallDock for smaller screens */}
-      <SmallDock items={items} className={smallClassName} />
-    </>
+    <motion.div
+      onMouseMove={(e) => mouseXPosition.set(e.pageX)}
+      onMouseLeave={() => mouseXPosition.set(Infinity)}
+      className={cn(
+        "mx-auto flex h-16 w-full max-w-4xl items-end justify-around gap-4 rounded-2xl bg-white/40 px-4 pb-3 dark:bg-black/40 border border-gray-200/30 backdrop-blur-sm dark:border-gray-800/30",
+        className
+      )}
+    >
+      {items.map((item) => (
+        <DockIcon mouseX={mouseXPosition} key={item.title} {...item} />
+      ))}
+    </motion.div>
   );
 }
-
-// Component for the large dock, visible on larger screens
-const LargeDock = ({
-    items,
-    className,
-  }: {
-    items: { title: string; icon: React.ReactNode; href: string }[];
-    className?: string;
-  }) => {
-    const mouseXPosition = useMotionValue(Infinity);
-  
-    return (
-      <motion.div
-        onMouseMove={(e) => mouseXPosition.set(e.pageX)}
-        onMouseLeave={() => mouseXPosition.set(Infinity)}
-        className={cn(
-          "mx-auto hidden h-16 w-full max-w-4xl items-end justify-around gap-4 rounded-2xl bg-white/40 px-4 pb-3 dark:bg-black/40 md:flex", // Updated to evenly distribute icons
-          className,
-          "border border-gray-200/30 backdrop-blur-sm dark:border-gray-800/30"
-        )}
-      >
-        {items.map((item) => (
-          <DockIcon mouseX={mouseXPosition} key={item.title} {...item} />
-        ))}
-      </motion.div>
-    );
-  };
 
 // Component for individual icons in the dock
 function DockIcon({
@@ -127,62 +107,3 @@ function DockIcon({
     </Link>
   );
 }
-
-// Component for the small dock, visible on smaller screens
-const SmallDock = ({
-  items,
-  className,
-}: {
-  items: { title: string; icon: React.ReactNode; href: string }[]; // Items to display
-  className?: string; // Optional class name
-}) => {
-  const [isOpen, setIsOpen] = useState(false); // State to manage open/close of the small dock
-
-  return (
-    <div className={cn("relative block md:hidden", className)}>
-      <AnimatePresence>
-        {/* Render menu items when open */}
-        {isOpen && (
-          <motion.div
-            layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
-          >
-            {items.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }} // Initial animation state
-                animate={{ opacity: 1, y: 0 }} // Animation to visible state
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: { delay: index * 0.05 }, // Delay based on index
-                }}
-                transition={{ delay: (items.length - 1 - index) * 0.05 }} // Delay for exit animations
-              >
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/40 text-black shadow-md backdrop-blur-md dark:bg-white/40 dark:text-white"
-                >
-                  <div className="h-4 w-4">{item.icon}</div> {/* Render the icon */}
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      {/* Button to toggle the small dock open/close */}
-      <button
-        onClick={() => setIsOpen(!isOpen)} // Toggle isOpen state on click
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-white/40 text-black shadow-md backdrop-blur-md dark:bg-white/40 dark:text-white"
-      >
-        {/* Render the appropriate icon based on open/close state */}
-        {isOpen ? (
-          <X className="h-5 w-5" /> // Show close icon when open
-        ) : (
-          <Menu className="h-5 w-5" /> // Show menu icon when closed
-        )}
-      </button>
-    </div>
-  );
-};

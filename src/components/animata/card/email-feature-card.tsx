@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FileUpload } from "@/components/ui/file-upload";
 import emailjs from "emailjs-com";
+import { Copy, CopyCheck } from "lucide-react";
 
 interface EmailCardProps {
   onClose: () => void;
@@ -25,6 +26,14 @@ const EmailCard: React.FC<EmailCardProps> = ({ onClose }) => {
 
   const [errors, setErrors] = useState<{ name?: string; fromEmail?: string }>({});
   const [isSent, setIsSent] = useState(false);
+  const [copySuccess, setCopySuccess] = useState<boolean>(false);
+  const [showCopyText, setShowCopyText] = useState<boolean>(false);
+
+  // Reset the copy icon and "Copied" text when the modal is closed
+  useEffect(() => {
+    setCopySuccess(false);
+    setShowCopyText(false);
+  }, [onClose]);
 
   const validateForm = () => {
     const newErrors: { name?: string; fromEmail?: string } = {};
@@ -98,11 +107,27 @@ const EmailCard: React.FC<EmailCardProps> = ({ onClose }) => {
     );
   };
 
+  const copyToClipboard = () => {
+    const email = "hasibshaif1@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      setCopySuccess(true);
+      setShowCopyText(true);
+      setTimeout(() => {
+        setCopySuccess(false);
+        setShowCopyText(false);
+      }, 2000);
+    });
+  };
+
   return (
-    <div className="group relative w-full max-w-md bg-black/20 border border-white rounded-lg shadow-md p-4 text-black backdrop-blur-sm transition-shadow duration-300 ease-in-out">
+      <div
+        className={`group relative max-w-5xl w-full md:w-[80vw] lg:w-[90vw] bg-black/20 border border-white rounded-lg shadow-md text-black backdrop-blur-sm transition-shadow duration-300 ease-in-out md:h-[90vh] sm:h-[80vh] h-[75vh] overflow-auto ${
+          isSent ? "p-0" : "p-8"
+        }`}
+      >
       {isSent ? (
-        <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-green-500 transition-opacity duration-300">
-          <span className="text-2xl font-bold">Email Sent! 🎉</span>
+        <div className="flex items-center justify-center h-full w-full bg-green-500 rounded-lg">
+          <span className="text-2xl font-bold text-white">Email Sent! 🎉</span>
         </div>
       ) : (
         <form onSubmit={handleSendEmail} className="flex flex-col gap-3 text-sm">
@@ -116,7 +141,7 @@ const EmailCard: React.FC<EmailCardProps> = ({ onClose }) => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="mt-1 rounded-md border border-gray-300 p-1 text-sm"
+              className="mt-1 rounded-md border border-gray-300 p-2 text-sm"
               placeholder="Your name"
               required
             />
@@ -131,19 +156,28 @@ const EmailCard: React.FC<EmailCardProps> = ({ onClose }) => {
               name="fromEmail"
               value={formData.fromEmail}
               onChange={handleInputChange}
-              className="mt-1 rounded-md border border-gray-300 p-1 text-sm"
+              className="mt-1 rounded-md border border-gray-300 p-2 text-sm"
               placeholder="you@example.com"
               required
             />
             {errors.fromEmail && <p className="mt-1 text-red-600 text-xs">{errors.fromEmail}</p>}
           </div>
 
-          {/* To Email (Static) */}
+          {/* To Email (Static) with Copy/CopyCheck Icon */}
           <div className="flex flex-col">
             <label className="font-medium text-white">To</label>
-            <p className="mt-1 rounded-md border border-gray-300 p-1 bg-gray-100 text-gray-400 text-sm">
+            <div className="flex items-center justify-between gap-2 mt-1 rounded-md border border-gray-300 p-2 bg-gray-100 text-gray-400 text-sm">
               hasibshaif1@gmail.com
-            </p>
+              <button
+                type="button"
+                className="ml-2 flex items-center text-gray-500 hover:text-blue-500"
+                onClick={copyToClipboard}
+                aria-label="Copy email to clipboard"
+              >
+                {copySuccess ? <CopyCheck size={18} /> : <Copy size={18} />}
+              </button>
+            </div>
+            {showCopyText && <p className="text-xs text-green-500 mt-1">Copied!</p>}
           </div>
 
           {/* Subject Line */}
@@ -154,7 +188,7 @@ const EmailCard: React.FC<EmailCardProps> = ({ onClose }) => {
               name="subject"
               value={formData.subject}
               onChange={handleInputChange}
-              className="mt-1 rounded-md border border-gray-300 p-1 text-sm"
+              className="mt-1 rounded-md border border-gray-300 p-2 text-sm"
               required
             />
           </div>
@@ -166,7 +200,7 @@ const EmailCard: React.FC<EmailCardProps> = ({ onClose }) => {
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              className="mt-1 h-16 rounded-md border border-gray-300 p-1 text-sm max-h-40 overflow-auto"
+              className="mt-1 rounded-md border border-gray-300 p-2 text-sm max-h-40 overflow-auto"
               required
             />
           </div>
@@ -181,7 +215,7 @@ const EmailCard: React.FC<EmailCardProps> = ({ onClose }) => {
 
           <button
             type="submit"
-            className="mt-3 self-end rounded-full bg-gray-600 p-2 text-xs cursor-pointer transition-colors duration-300 hover:bg-green-600"
+            className="mt-4 self-end rounded-full bg-gray-600 p-3 text-xs cursor-pointer transition-colors duration-300 hover:bg-green-600"
           >
             <span role="img" aria-label="send">
               ➤ Send

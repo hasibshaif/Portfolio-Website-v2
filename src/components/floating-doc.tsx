@@ -44,7 +44,7 @@ export default function FloatingDock() {
   return (
     <>
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
-        <AnimatedDock items={dockItems} largeClassName="w-[400px]" smallClassName="w-[200px]" />
+        <AnimatedDock items={dockItems} />
       </div>
 
       {isModalOpen && (
@@ -53,7 +53,7 @@ export default function FloatingDock() {
             <EmailCard onClose={closeModal} />
             <button
               onClick={closeModal}
-              className="absolute top-2 right-2 text-white bg-red-600 hover:bg-red-500 p-2 rounded-full"
+              className="absolute top-2 right-2 text-white hover:text-red-500 p-2 rounded-full transition-colors duration-300 ease-in-out"
             >
               ✕
             </button>

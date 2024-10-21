@@ -11,12 +11,18 @@ import {
   Grid3X3,
   Search,
   Gamepad,
-  ArrowRight,
 } from "lucide-react";
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '@radix-ui/react-tooltip';
-import { motion } from 'framer-motion';
+import {
+  TooltipProvider,
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@radix-ui/react-tooltip";
+import { motion } from "framer-motion";
 import { LinkPreview } from "./ui/link-preview";
+import ExternalLinkButton from "./animata/button/external-link-button";
 import { cn } from "@/lib/utils";
+import ShineBorder from "./ui/shine-border";
 
 function BentoCard({
   title,
@@ -39,9 +45,17 @@ function BentoCard({
 }) {
   return (
     <TooltipProvider>
-      <div className={cn("relative rounded-md overflow-hidden", className)}>
+      <div
+        className={cn(
+          "relative rounded-md overflow-hidden p-2 md:p-4",
+          className
+        )}
+      >
         {/* Gradient Background */}
-        <div className={cn("absolute inset-0", gradient)} style={{ opacity: 0.9 }}></div>
+        <div
+          className={cn("absolute inset-0", gradient)}
+          style={{ opacity: 0.9 }}
+        ></div>
 
         {/* Content Layer */}
         <section className="relative z-10 flex h-full flex-col gap-4 p-4">
@@ -53,16 +67,18 @@ function BentoCard({
           </header>
           <p className="flex-1 text-sm text-gray-200">{description}</p>
           <div className="flex flex-col gap-2">
-            {deployedLink && (
-              deployedLink === "#top" ? (
+            {deployedLink &&
+              (deployedLink === "#top" ? (
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button
-                      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                      className="flex items-center gap-1 text-white font-semibold hover:text-blue-400 hover:underline"
+                    <div
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
+                      className="flex items-center gap-1 cursor-pointer"
                     >
-                      View Deployed Site <ArrowRight size={16} />
-                    </button>
+                      <ExternalLinkButton text="View Deployed Site" />
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent side="top" align="center" asChild>
                     <motion.div
@@ -79,21 +95,20 @@ function BentoCard({
               ) : (
                 <LinkPreview
                   url={deployedLink}
-                  className="flex items-center gap-1 text-white font-semibold hover:text-blue-400 hover:underline"
+                  className="project-link flex items-center gap-1 font-semibold"
                   isStatic={Boolean(imageSrc)}
                   imageSrc={imageSrc ?? ""}
                 >
-                  View Deployed Site <ArrowRight size={16} />
+                  <ExternalLinkButton text="View Deployed Site" />
                 </LinkPreview>
-              )
-            )}
+              ))}
             <a
               href={repoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-white font-semibold hover:text-blue-400 hover:underline"
+              className="project-link flex items-center gap-1 font-semibold"
             >
-              View GitHub Repo <ArrowRight size={16} />
+              <ExternalLinkButton text="View GitHub Repo" />
             </a>
           </div>
         </section>
@@ -147,7 +162,8 @@ export default function Projects() {
       deployedLink: "https://criss-cross-currency-converter.vercel.app",
       repoLink: "https://github.com/hasibshaif/Criss-Cross-Currency-Converter",
       gradient: "bg-gradient-to-br from-green-900 via-green-600 to-yellow-700",
-      imageSrc: "/img/link-previews/projects/criss-cross-currency-converter-preview.PNG",
+      imageSrc:
+        "/img/link-previews/projects/criss-cross-currency-converter-preview.PNG",
     },
     {
       title: "iOS Calculator App Replica",
@@ -157,7 +173,8 @@ export default function Projects() {
       deployedLink: "https://hasibshaif.github.io/calculator-app/",
       repoLink: "https://github.com/hasibshaif/calculator-app",
       gradient: "bg-gradient-to-br from-orange-600 via-orange-500 to-gray-900",
-      imageSrc: "/img/link-previews/projects/iOS-calculator-app-replica-preview.PNG",
+      imageSrc:
+        "/img/link-previews/projects/iOS-calculator-app-replica-preview.PNG",
     },
     {
       title: "2048 Automator w/ Selenium WebDriver",
@@ -186,24 +203,38 @@ export default function Projects() {
   ];
 
   return (
-    <section
-      id="projects"
-      className="py-10 bg-black/20 border border-white rounded-lg shadow-md px-8"
-    >
-      <h2 className="text-3xl font-bold text-primary mb-8">Projects</h2>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <BentoCard
-            key={index}
-            title={project.title}
-            icon={project.icon}
-            description={project.description}
-            deployedLink={project.deployedLink}
-            repoLink={project.repoLink}
-            gradient={project.gradient}
-            imageSrc={project.imageSrc}
-          />
-        ))}
+    <section id="projects" className="py-5">
+      <div className="flex flex-col gap-4 items-start">
+        {/* Section Header */}
+        <h2 className="text-2xl sm:text-3xl font-bold text-primary px-4">
+          Projects
+        </h2>
+
+        {/* Bordered project content */}
+        <ShineBorder
+          borderRadius={16}
+          borderWidth={2}
+          duration={14}
+          color={["#45006a", "white", "#0275d4"]}
+          className="w-full p-4 md:p-6"
+        >
+          <div className="bg-black/20 rounded-[16px] w-full p-4">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {projects.map((project, index) => (
+                <BentoCard
+                  key={index}
+                  title={project.title}
+                  icon={project.icon}
+                  description={project.description}
+                  deployedLink={project.deployedLink}
+                  repoLink={project.repoLink}
+                  gradient={project.gradient}
+                  imageSrc={project.imageSrc}
+                />
+              ))}
+            </div>
+          </div>
+        </ShineBorder>
       </div>
     </section>
   );
