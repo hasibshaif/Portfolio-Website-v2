@@ -10,6 +10,7 @@ import {
   useSpring,
 } from "framer-motion";
 import React, { useState } from "react";
+import Image from 'next/image';
 
 export type SkillData = {
   name: string;
@@ -69,10 +70,12 @@ export default function AvatarList({
               )}
               style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.name}
-                className="rounded-full object-contain w-full h-full"
+                className="rounded-full object-contain"
+                width={70} // Set appropriate width
+                height={70} // Set appropriate height
                 style={{ padding: "4px" }}
               />
             </div>

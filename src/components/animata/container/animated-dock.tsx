@@ -9,7 +9,6 @@ import {
 } from "framer-motion";
 import Link from "next/link"; // Next.js Link component for navigation
 import React, { useRef, useState } from "react"; // Importing React hooks
-import { Menu, X } from "lucide-react"; // Importing icons from lucide-react
 
 // Interface for props accepted by the AnimatedDock component
 interface AnimatedDockProps {

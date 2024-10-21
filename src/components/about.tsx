@@ -2,10 +2,10 @@
 "use client";
 import { CardContent } from "@/components/ui/card";
 import BoxReveal from "./ui/box-reveal";
-import ShimmerButton from "./ui/shimmer-button";
 import { LinkPreview } from "./ui/link-preview";
 import ShineBorder from "./ui/shine-border";
 import { DirectionAwareHover } from "./ui/direction-aware-hover";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 export function AboutMe() {
   return (
@@ -64,11 +64,10 @@ export function AboutMe() {
                     imageSrc="/img/link-previews/about/resume-preview.PNG"
                     className="flex flex-col items-center"
                   >
-                    <ShimmerButton
-                      className="relative overflow-hidden text-white px-6 py-3 rounded-lg bg-gradient-to-br from-black to-gray-800 hover:gradient-to-bl hover:from-gray-800 hover:to-black"
-                      shimmerColor="#00aaff"
-                      shimmerSize="0.2em"
-                      shimmerDuration="5s"
+                    <HoverBorderGradient
+                      as="button"
+                      containerClassName="relative overflow-hidden"
+                      className="text-white"
                       onClick={() =>
                         window.open(
                           "/documents/Hasib Shaif - Resume.pdf",
@@ -77,7 +76,7 @@ export function AboutMe() {
                       }
                     >
                       Resume
-                    </ShimmerButton>
+                    </HoverBorderGradient>
                   </LinkPreview>
                 </div>
               </div>
