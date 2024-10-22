@@ -179,7 +179,7 @@ export function MyTimeline() {
         <CardSpotlight className="mb-8">
           <div className="flex flex-row items-center gap-4">
             <a
-              href="https://www.cuny.edu/projects/administration/offices/evaluation/areas-of-focus_1/college_readiness/the-college-and-career-bridge-for-all-ccb4a/"
+              href="https://www.cuny.edu/academics/current-initiatives/k16/college-career-bridge-for-all/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -194,7 +194,7 @@ export function MyTimeline() {
             <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
               Started working as a Database Administrator and Career Launch
               Coach at{" "}
-              <LinkPreview url="https://www.cuny.edu/projects/administration/offices/evaluation/areas-of-focus_1/college_readiness/the-college-and-career-bridge-for-all-ccb4a/">
+              <LinkPreview url="https://www.cuny.edu/academics/current-initiatives/k16/college-career-bridge-for-all/">
                 CCB4A
               </LinkPreview>
             </p>
