@@ -34,11 +34,6 @@ export default function FloatingDock() {
       href: "#",
       onClick: openEmailModal,
     },
-    {
-      title: "Phone",
-      icon: <Phone className="h-6 w-6" />,
-      href: "tel:+19293745110",
-    },
   ];
 
   return (

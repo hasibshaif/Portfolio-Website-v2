@@ -29,7 +29,7 @@ export function MyTimeline() {
               />
             </a>
             <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
-              Began my internship as a Web Development Intern at{" "}
+              Began my internship as a Web & Mobile Development Intern at{" "}
               <LinkPreview url="https://www.pulp.chat">
                 Pulp Internet Corporation
               </LinkPreview>
