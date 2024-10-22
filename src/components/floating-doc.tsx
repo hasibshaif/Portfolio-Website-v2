@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import AnimatedDock from "./animata/container/animated-dock";
-import { Mail, Phone, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import EmailCard from "./animata/card/email-feature-card";
 
 export default function FloatingDock() {
