@@ -9,7 +9,7 @@ const kanitRegular = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Hasib Shaif",
+  title: "Hasib Shaif", // Ensure title is always a string
   description: "",
 };
 
@@ -20,9 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${kanitRegular} antialiased`}
-      >
+      <head>
+        <link rel="icon" href="/favicon/favicon.png" type="image/svg+xml" />
+        <title>{String(metadata.title ?? "Default Title")}</title>
+      </head>
+      <body className={`${kanitRegular} antialiased`}>
         {children}
       </body>
     </html>
