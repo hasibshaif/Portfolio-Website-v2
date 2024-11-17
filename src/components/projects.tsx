@@ -11,6 +11,7 @@ import {
   Grid3X3,
   Search,
   Gamepad,
+  Calendar,
 } from "lucide-react";
 import {
   TooltipProvider,
@@ -128,6 +129,20 @@ export default function Projects() {
       repoLink: "https://github.com/hasibshaif/Portfolio-Website",
       gradient: "bg-gradient-to-br from-[#000000] via-[#2c003e] to-[#45006a]",
       imageSrc: "",
+    },
+    {
+      title: "Kronicle",
+      icon: (
+        <div className="flex gap-2">
+          <Calendar size={24} />
+        </div>
+      ),
+      description:
+        "Responsive, user-friendly, Calendly-inspired scheduling platform built using Next.js. Integrated Nylas API for calendar synchronization and auth flow, and MongoDB for data storage. Created modern user interface with Tailwind CSS and Framer Motion.",
+      deployedLink: "https://kronicle-eight.vercel.app",
+      repoLink: "https://github.com/hasibshaif/Kronicle",
+      gradient: "bg-gradient-to-br from-[#eb6613] to-[#dbc858]",
+      imageSrc: "/img/link-previews/projects/kronicle-preview.PNG",
     },
     {
       title: "Supercar AI Chatbot",
