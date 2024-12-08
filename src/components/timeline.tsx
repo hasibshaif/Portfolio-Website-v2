@@ -16,7 +16,7 @@ export function MyTimeline() {
         <CardSpotlight className="mb-8">
           <div className="flex flex-row items-start gap-4">
             <a
-              href="https://www.pulp.chat"
+              href="https://www.pulpinternet.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -30,7 +30,7 @@ export function MyTimeline() {
             </a>
             <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
               Began my internship as a Web & Mobile Development Intern at{" "}
-              <LinkPreview url="https://www.pulp.chat">
+              <LinkPreview url="https://www.pulpinternet.com">
                 Pulp Internet Corporation
               </LinkPreview>
             </p>
