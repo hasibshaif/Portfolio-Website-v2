@@ -30,6 +30,7 @@ const toolsPlatforms = [
   { name: "Open AI API", image: "/icons/skills-icons/openai-color.svg" },
   { name: "Langchain", image: "/icons/skills-icons/langchain-color.svg" },
   { name: "Pinecone", image: "/icons/skills-icons/pinecone.svg" },
+  {name: "MongoDB", image: "/icons/skills-icons/mongodb-color.svg"},
   { name: "Vercel", image: "/icons/skills-icons/vercel-color.svg" },
   { name: "Firebase", image: "/icons/skills-icons/firebase-color.svg" },
   { name: "Clerk", image: "/icons/skills-icons/clerk-color.svg" },
