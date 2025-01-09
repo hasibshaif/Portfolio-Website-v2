@@ -11,31 +11,111 @@ import ShineBorder from "./ui/shine-border";
 export function MyTimeline() {
   const timelineItems = [
     {
+      title: "January, 2024",
+      content: (
+        <>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-start gap-4">
+              <a
+                href="https://new.mta.info/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/icons/timeline-icons/mta-logo.svg"
+                  alt="Pulp"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Began seasonal internship as a Software Engineering Intern at {" "}
+                <LinkPreview url="https://new.mta.info/">
+                  Metropolitan Transportation Authority (MTA)
+                </LinkPreview>, NYC's expansive public transit system.
+              </p>
+            </div>
+          </CardSpotlight>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-center gap-4">
+              <a
+                href="https://headstarter.co"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/icons/timeline-icons/nebdhub-logo.png"
+                  alt="Headstarter"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Took part in {" "}
+                <LinkPreview url="https://nebigdatahub.org/">
+                  Northeast Big Data Innovation Hub
+                </LinkPreview>'s <LinkPreview url="https://nebigdatahub.org/nsdc/tdsp/">
+                  Transporation Data Science Project (TDSP) 
+                </LinkPreview> as a Data Science Researcher
+              </p>
+            </div>
+          </CardSpotlight>
+        </>
+      ),
+    },
+    {
       title: "September, 2024",
       content: (
-        <CardSpotlight className="mb-8">
-          <div className="flex flex-row items-start gap-4">
-            <a
-              href="https://www.pulpinternet.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/icons/timeline-icons/pulp-logo.svg"
-                alt="Pulp"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </a>
-            <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
-              Began my internship as a Web & Mobile Development Intern at{" "}
-              <LinkPreview url="https://www.pulpinternet.com">
-                Pulp Internet Corporation
-              </LinkPreview>
-            </p>
-          </div>
-        </CardSpotlight>
+        <>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-start gap-4">
+              <a
+                href="https://www.pulpinternet.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/icons/timeline-icons/pulp-logo.svg"
+                  alt="Pulp"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Began my internship as a Software Engineering Intern at{" "}
+                <LinkPreview url="https://www.pulpinternet.com">
+                  Pulp Internet Corporation
+                </LinkPreview>
+              </p>
+            </div>
+          </CardSpotlight>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-center gap-4">
+              <a
+                href="https://headstarter.co"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/icons/timeline-icons/headstarter-logo.png"
+                  alt="Headstarter"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Completed fellowship with {" "}
+                <LinkPreview url="https://headstarter.co">
+                  Headstarter AI
+                </LinkPreview>
+              </p>
+            </div>
+          </CardSpotlight>
+        </>
       ),
     },
     {

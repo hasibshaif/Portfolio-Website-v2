@@ -31,6 +31,7 @@
     "react-dom": "^18",
     "react-dropzone": "^14.2.9",
     "react-icon-cloud": "^4.1.4",
+    "react-icons": "^5.4.0",
     "simple-icons": "^13.10.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
