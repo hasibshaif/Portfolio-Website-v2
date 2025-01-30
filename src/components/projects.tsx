@@ -13,6 +13,8 @@ import {
   Gamepad,
   Calendar,
 } from "lucide-react";
+import { IoIosBowtie } from "react-icons/io";
+import { IoSparklesSharp } from "react-icons/io5";
 import {
   TooltipProvider,
   Tooltip,
@@ -129,6 +131,21 @@ export default function Projects() {
       repoLink: "https://github.com/hasibshaif/Portfolio-Website",
       gradient: "bg-gradient-to-br from-[#000000] via-[#2c003e] to-[#45006a]",
       imageSrc: "",
+    },
+    {
+      title: "tAIlor - AI Resume Tailor",
+      icon: (
+        <div className="flex gap-2">
+          <IoIosBowtie size={24} />
+          <IoSparklesSharp size={24}/>
+        </div>
+      ),
+      description:
+        "Full-stack AI-powered resume tailoring platform leveraging Python, Flask, and OpenAI's API for GPT LLM, allowing for resume customization based on job descriptions. Feature-rich, user-friendly, and responsive frontend built with Next.js, TypeScript, Tailwind CSS, and Motion. Implemented file storage with AWS S3 and IAM.",
+      deployedLink: "https://ai-resume-tailorer.vercel.app/",
+      repoLink: "https://github.com/hasibshaif/tAIlor-AI_Resume_Tailor",
+      gradient: "bg-gradient-to-br from-[#0084ff] via-[#213d6b] to-[#062047]",
+      imageSrc: "/img/link-previews/projects/tAIlor-preview.PNG",
     },
     {
       title: "Kronicle",
