@@ -11,7 +11,7 @@ import ShineBorder from "./ui/shine-border";
 export function MyTimeline() {
   const timelineItems = [
     {
-      title: "January, 2024",
+      title: "January, 2025",
       content: (
         <>
           <CardSpotlight className="mb-8">
