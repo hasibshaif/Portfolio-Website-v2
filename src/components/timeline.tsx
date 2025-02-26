@@ -23,7 +23,92 @@ export function MyTimeline() {
               >
                 <Image
                   src="/icons/timeline-icons/mta-logo.svg"
-                  alt="Pulp"
+                  alt="MTA"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Concluded winter internship with the {" "}
+                <LinkPreview url="https://linktr.ee/baruchfullstack">
+                  Metropolitan Transportation Authority (MTA)
+                </LinkPreview>, developing and integrating a digitalized payroll platform to automate a previously manual, paper-based timesheet system.
+              </p>
+            </div>
+          </CardSpotlight>
+        </>
+      ),
+    },
+    {
+      title: "January, 2025",
+      content: (
+        <>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-start gap-4">
+              <a
+                href="https://linktr.ee/baruchfullstack"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/icons/timeline-icons/bfs_logo.svg"
+                  alt="BFS"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Co-founded {" "}
+                <LinkPreview url="https://linktr.ee/baruchfullstack">
+                  Baruch Full Stack (BFS)
+                </LinkPreview>, the college's premiere software engineering student organization.
+              </p>
+            </div>
+          </CardSpotlight>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-center gap-4">
+              <a
+                href="https://nebigdatahub.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/icons/timeline-icons/nebdhub-logo.png"
+                  alt="NEBDHUB"
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Concluded the {" "}
+                <LinkPreview url="https://nebigdatahub.org/">
+                  Northeast Big Data Innovation Hub's
+                </LinkPreview> <LinkPreview url="https://nebigdatahub.org/nsdc/tdsp/">
+                  Transporation Data Science Project (TDSP) 
+                </LinkPreview>, processing 2M+ traffic records with Pandas, analyzing trends with time series and geospatial methods, and visualizing insights using Matplotlib and Seaborn.
+              </p>
+            </div>
+          </CardSpotlight>
+        </>
+      ),
+    },
+    {
+      title: "December, 2024",
+      content: (
+        <>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-start gap-4">
+              <a
+                href="https://new.mta.info/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/icons/timeline-icons/mta-logo.svg"
+                  alt="MTA"
                   width={100}
                   height={100}
                   className="object-contain"
@@ -40,13 +125,13 @@ export function MyTimeline() {
           <CardSpotlight className="mb-8">
             <div className="flex flex-row items-center gap-4">
               <a
-                href="https://headstarter.co"
+                href="https://nebigdatahub.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
                   src="/icons/timeline-icons/nebdhub-logo.png"
-                  alt="Headstarter"
+                  alt="NEBDHUB"
                   width={100}
                   height={100}
                   className="object-contain"
@@ -58,7 +143,7 @@ export function MyTimeline() {
                   Northeast Big Data Innovation Hub
                 </LinkPreview>'s <LinkPreview url="https://nebigdatahub.org/nsdc/tdsp/">
                   Transporation Data Science Project (TDSP) 
-                </LinkPreview> as a Data Science Researcher
+                </LinkPreview> as a Data Science Researcher.
               </p>
             </div>
           </CardSpotlight>
@@ -88,7 +173,7 @@ export function MyTimeline() {
                 Began my internship as a Software Engineering Intern at{" "}
                 <LinkPreview url="https://www.pulpinternet.com">
                   Pulp Internet Corporation
-                </LinkPreview>
+                </LinkPreview>.
               </p>
             </div>
           </CardSpotlight>
@@ -111,7 +196,7 @@ export function MyTimeline() {
                 Completed fellowship with {" "}
                 <LinkPreview url="https://headstarter.co">
                   Headstarter AI
-                </LinkPreview>
+                </LinkPreview>, building 5 full-stack projects with modern tech stacks.
               </p>
             </div>
           </CardSpotlight>
@@ -140,7 +225,7 @@ export function MyTimeline() {
               Became a Software Engineering Fellow at{" "}
               <LinkPreview url="https://headstarter.co">
                 Headstarter AI
-              </LinkPreview>
+              </LinkPreview>.
             </p>
           </div>
         </CardSpotlight>
@@ -169,7 +254,7 @@ export function MyTimeline() {
                 Became a Tech Fellow at{" "}
                 <LinkPreview url="https://www.codepath.org">
                   CodePath
-                </LinkPreview>
+                </LinkPreview>.
               </p>
             </div>
           </CardSpotlight>
@@ -191,7 +276,7 @@ export function MyTimeline() {
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Completed Externship with{" "}
-                <LinkPreview url="https://www.webacy.com">Webacy</LinkPreview>
+                <LinkPreview url="https://www.webacy.com">Webacy</LinkPreview>, analyzing 200+ smart contract vulnerabilities and conducting cluster analysis on 10,000+ data points, leveraging SQL, scikit-learn, PowerBI, and Tableau to enhance risk assessment and business intelligence in crypto and Web3.
               </p>
             </div>
           </CardSpotlight>
@@ -219,7 +304,7 @@ export function MyTimeline() {
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Became a Web3 Security Data Analytics Extern at{" "}
-                <LinkPreview url="https://www.webacy.com">Webacy</LinkPreview>
+                <LinkPreview url="https://www.webacy.com">Webacy</LinkPreview>.
               </p>
             </div>
           </CardSpotlight>
@@ -276,7 +361,7 @@ export function MyTimeline() {
               Coach at{" "}
               <LinkPreview url="https://www.cuny.edu/academics/current-initiatives/k16/college-career-bridge-for-all/">
                 CCB4A
-              </LinkPreview>
+              </LinkPreview>.
             </p>
           </div>
         </CardSpotlight>
@@ -303,8 +388,8 @@ export function MyTimeline() {
             <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
               Began college journey as an undergraduate at{" "}
               <LinkPreview url="https://www.baruch.cuny.edu">
-                Baruch College.
-              </LinkPreview>
+                Baruch College
+              </LinkPreview>.
             </p>
           </div>
         </CardSpotlight>
