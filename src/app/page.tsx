@@ -22,7 +22,7 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen h-full bg-gradient-to-br from-[#1f012b] via-[#0c0136] to-black text-foreground dark flex flex-col md:flex-row">
+    <div className="relative min-h-screen h-full bg-gradient-to-br from-[#1d0129] to-black text-foreground dark flex flex-col md:flex-row">
       {/* Sidebar */}
       <Sidebar open={sidebarOpen} setOpen={setSidebarOpen}>
         <SidebarBody className="h-full fixed top-0 left-0 z-50 w-3/4 sm:w-2/4 md:w-1/4 lg:w-1/5">

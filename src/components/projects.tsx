@@ -26,6 +26,7 @@ import { LinkPreview } from "./ui/link-preview";
 import ExternalLinkButton from "./animata/button/external-link-button";
 import { cn } from "@/lib/utils";
 import ShineBorder from "./ui/shine-border";
+import SplitText from "./animata/text/split-text";
 
 function BentoCard({
   title,
@@ -238,9 +239,7 @@ export default function Projects() {
     <section id="projects" className="py-5">
       <div className="flex flex-col gap-4 items-start">
         {/* Section Header */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-primary px-4">
-          Projects
-        </h2>
+        <SplitText text="Projects" />
 
         {/* Bordered project content */}
         <ShineBorder

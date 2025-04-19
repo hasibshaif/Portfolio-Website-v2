@@ -1,6 +1,7 @@
 import AvatarList from "./animata/list/avatar-list";
 import { CardContent } from "@/components/ui/card";
 import ShineBorder from "./ui/shine-border";
+import SplitText from "./animata/text/split-text";
 
 const programmingLanguages = [
   { name: "Python", image: "/icons/skills-icons/python-color.svg" },
@@ -72,9 +73,7 @@ export function Skills() {
     <section id="skills" className="py-5">
       <div className="flex flex-col gap-4 items-start">
         {/* Section Header */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-primary px-4">
-          Skills
-        </h2>
+        <SplitText text="Skills" />
         {/* Bordered card content to match About section */}
         <ShineBorder
           borderRadius={16}

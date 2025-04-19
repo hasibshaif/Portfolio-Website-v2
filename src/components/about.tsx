@@ -6,15 +6,14 @@ import { LinkPreview } from "./ui/link-preview";
 import ShineBorder from "./ui/shine-border";
 import { DirectionAwareHover } from "./ui/direction-aware-hover";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import SplitText from "./animata/text/split-text";
 
 export function AboutMe() {
   return (
     <section id="about" className="py-5">
       <div className="flex flex-col gap-4 items-start">
         {/* Header aligned at the top-left */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-primary px-4">
-          About Me
-        </h2>
+        <SplitText text="About Me" />
         {/* Bordered card content */}
         <ShineBorder
           borderRadius={16}
@@ -47,9 +46,8 @@ export function AboutMe() {
                     </p>
                     <p>
                       Currently, I am actively exploring various avenues within
-                      the field, including software engineering, web
-                      development, app development, data science, and
-                      cybersecurity. My diverse interests reflect my enthusiasm
+                      the field, with particular interests in software engineering, full-stack
+                      development, data science, and IT. My diverse interests reflect my enthusiasm
                       for innovation and my commitment to continuous learning
                       and growth in this dynamic and ever-evolving industry.
                     </p>

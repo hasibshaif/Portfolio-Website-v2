@@ -38,7 +38,7 @@ export default function TextBorderAnimation({ text = "Programming", className }:
 
   return (
     <div onMouseEnter={handleHover} onMouseLeave={handleHoverExit} className="overflow-hidden">
-      <span className={cn("text-5xl font-bold text-foreground", className)}>{text}</span>
+      <span className={cn("text-xl font-semibold mb-6", className)}>{text}</span>
       <div className="relative mt-1 h-1 w-full">
         <div
           className={cn(

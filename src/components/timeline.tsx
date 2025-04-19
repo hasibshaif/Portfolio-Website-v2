@@ -7,6 +7,7 @@ import { LinkPreview } from "./ui/link-preview";
 import { CardSpotlight } from "./ui/card-spotlight";
 import { Timeline } from "./ui/timeline";
 import ShineBorder from "./ui/shine-border";
+import SplitText from "./animata/text/split-text";
 
 export function MyTimeline() {
   const timelineItems = [
@@ -430,9 +431,7 @@ export function MyTimeline() {
     <section id="timeline" className="my-timeline-links py-5">
       <div className="flex flex-col gap-4 items-start">
         {/* Header aligned at the top-left */}
-        <h2 className="text-3xl font-bold text-primary px-4">
-          Timeline of Experiences & Education
-        </h2>
+        <SplitText text="Timeline of Experiences & Education" />
 
         {/* Bordered timeline content */}
         <ShineBorder
