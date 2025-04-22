@@ -125,6 +125,7 @@ h2 {
   color: #1DA1F2 !important; /* Specific color for the links */
   text-decoration: underline;
   transition: color 0.3s ease;
+  --font-family-sans: var(--font-kanit-regular);
 }
 
 .my-timeline-links a:hover,

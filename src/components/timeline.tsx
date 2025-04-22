@@ -32,7 +32,7 @@ export function MyTimeline() {
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Concluded winter internship with the {" "}
-                <LinkPreview url="https://linktr.ee/baruchfullstack">
+                <LinkPreview url="https://new.mta.info/">
                   Metropolitan Transportation Authority (MTA)
                 </LinkPreview>, developing and integrating a digitalized payroll platform to automate a previously manual, paper-based timesheet system.
               </p>
@@ -277,7 +277,9 @@ export function MyTimeline() {
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Completed Externship with{" "}
-                <LinkPreview url="https://www.webacy.com">Webacy</LinkPreview>, analyzing 200+ smart contract vulnerabilities and conducting cluster analysis on 10,000+ data points, leveraging SQL, scikit-learn, PowerBI, and Tableau to enhance risk assessment and business intelligence in crypto and Web3.
+                <LinkPreview url="https://www.webacy.com">Webacy</LinkPreview>, 
+                analyzing 200+ smart contract vulnerabilities and conducting cluster analysis on 10,000+ data points, 
+                leveraging SQL, scikit-learn, PowerBI, and Tableau to enhance risk assessment and business intelligence in crypto and Web3.
               </p>
             </div>
           </CardSpotlight>
@@ -340,35 +342,6 @@ export function MyTimeline() {
       ),
     },
     {
-      title: "May, 2023",
-      content: (
-        <CardSpotlight className="mb-8">
-          <div className="flex flex-row items-center gap-4">
-            <a
-              href="https://www.cuny.edu/academics/current-initiatives/k16/college-career-bridge-for-all/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/icons/timeline-icons/ccb4a-logo.webp"
-                alt="CCB4A"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </a>
-            <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
-              Started working as a Database Administrator and Career Launch
-              Coach at{" "}
-              <LinkPreview url="https://www.cuny.edu/academics/current-initiatives/k16/college-career-bridge-for-all/">
-                CCB4A
-              </LinkPreview>.
-            </p>
-          </div>
-        </CardSpotlight>
-      ),
-    },
-    {
       title: "August, 2022",
       content: (
         <CardSpotlight className="mb-8">
@@ -387,7 +360,7 @@ export function MyTimeline() {
               />
             </a>
             <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
-              Began college journey as an undergraduate at{" "}
+              Began undergraduate journey at{" "}
               <LinkPreview url="https://www.baruch.cuny.edu">
                 Baruch College
               </LinkPreview>.
@@ -419,7 +392,7 @@ export function MyTimeline() {
               <LinkPreview url="https://www.brooklynlatin.org">
                 The Brooklyn Latin School
               </LinkPreview>{" "}
-              with an IB Diploma.
+              with an International Baccalaureate (IB) Diploma.
             </p>
           </div>
         </CardSpotlight>
