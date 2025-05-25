@@ -12,23 +12,57 @@ import SplitText from "./animata/text/split-text";
 export function MyTimeline() {
   const timelineItems = [
     {
+      title: "May, 2025",
+      content: (
+        <>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-center gap-4">
+              <a
+                href="https://www.addinextech.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/addinex-logo.jpg"
+                    alt="Addinex Technologies"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Began internship as a Software Engineer Intern at {" "}
+                <LinkPreview url="https://www.addinextech.com/">
+                  Addinex Technologies
+                </LinkPreview>
+              </p>
+            </div>
+          </CardSpotlight>
+        </>
+      ),
+    },
+    {
       title: "February, 2025",
       content: (
         <>
           <CardSpotlight className="mb-8">
-            <div className="flex flex-row items-start gap-4">
+            <div className="flex flex-row items-center gap-4">
               <a
                 href="https://new.mta.info/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/mta-logo.svg"
-                  alt="MTA"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/mta-logo.svg"
+                    alt="MTA"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Concluded winter internship with the {" "}
@@ -46,19 +80,21 @@ export function MyTimeline() {
       content: (
         <>
           <CardSpotlight className="mb-8">
-            <div className="flex flex-row items-start gap-4">
+            <div className="flex flex-row items-center gap-4">
               <a
                 href="https://linktr.ee/baruchfullstack"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/bfs_logo.svg"
-                  alt="BFS"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/bfs_logo.svg"
+                    alt="BFS"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Co-founded {" "}
@@ -75,13 +111,15 @@ export function MyTimeline() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/nebdhub-logo.png"
-                  alt="NEBDHUB"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/nebdhub-logo.png"
+                    alt="NEBDHUB"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Concluded the {" "}
@@ -101,22 +139,24 @@ export function MyTimeline() {
       content: (
         <>
           <CardSpotlight className="mb-8">
-            <div className="flex flex-row items-start gap-4">
+            <div className="flex flex-row items-center gap-4">
               <a
                 href="https://new.mta.info/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/mta-logo.svg"
-                  alt="MTA"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/mta-logo.svg"
+                    alt="MTA"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
-                Began seasonal internship as a Software Engineering Intern at {" "}
+                Began seasonal internship as a Software Engineer Intern at {" "}
                 <LinkPreview url="https://new.mta.info/">
                   Metropolitan Transportation Authority (MTA)
                 </LinkPreview>, NYC's expansive public transit system.
@@ -130,13 +170,15 @@ export function MyTimeline() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/nebdhub-logo.png"
-                  alt="NEBDHUB"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/nebdhub-logo.png"
+                    alt="NEBDHUB"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Took part in {" "}
@@ -156,22 +198,24 @@ export function MyTimeline() {
       content: (
         <>
           <CardSpotlight className="mb-8">
-            <div className="flex flex-row items-start gap-4">
+            <div className="flex flex-row items-center gap-4">
               <a
                 href="https://www.pulpinternet.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/pulp-logo.svg"
-                  alt="Pulp"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/pulp-logo.svg"
+                    alt="Pulp"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
-                Began my internship as a Software Engineering Intern at{" "}
+                Began my internship as a Software Engineer Intern at{" "}
                 <LinkPreview url="https://www.pulpinternet.com">
                   Pulp Internet Corporation
                 </LinkPreview>.
@@ -185,13 +229,15 @@ export function MyTimeline() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/headstarter-logo.png"
-                  alt="Headstarter"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/headstarter-logo.png"
+                    alt="Headstarter"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Completed fellowship with {" "}
@@ -214,13 +260,15 @@ export function MyTimeline() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/icons/timeline-icons/headstarter-logo.png"
-                alt="Headstarter"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
+              <div className="w-[100px] flex-shrink-0">
+                <Image
+                  src="/icons/timeline-icons/headstarter-logo.png"
+                  alt="Headstarter"
+                  width={75}
+                  height={75}
+                  className="object-contain"
+                />
+              </div>
             </a>
             <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
               Became a Software Engineering Fellow at{" "}
@@ -243,13 +291,15 @@ export function MyTimeline() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/codepath-logo.svg"
-                  alt="CodePath"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/codepath-logo.svg"
+                    alt="CodePath"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Became a Tech Fellow at{" "}
@@ -267,13 +317,15 @@ export function MyTimeline() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/webacy-logo.png"
-                  alt="Webacy"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/webacy-logo.png"
+                    alt="Webacy"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Completed Externship with{" "}
@@ -297,13 +349,15 @@ export function MyTimeline() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/webacy-logo.png"
-                  alt="Webacy"
-                  width={100}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/webacy-logo.png"
+                    alt="Webacy"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Became a Web3 Security Data Analytics Extern at{" "}
@@ -319,13 +373,15 @@ export function MyTimeline() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
-                  src="/icons/timeline-icons/baruch_starr_logo.svg"
-                  alt="Baruch STARR Career Development Center"
-                  width={200}
-                  height={100}
-                  className="object-contain"
-                />
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/baruch_starr_logo.svg"
+                    alt="Baruch STARR Career Development Center"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Selected as 1 of 35 students to participate in Baruch College's
@@ -351,13 +407,15 @@ export function MyTimeline() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/icons/timeline-icons/baruch_logo.png"
-                alt="Baruch"
-                width={100}
-                height={100}
-                className="object-contain transition-opacity duration-300 group-hover:opacity-75"
-              />
+              <div className="w-[100px] flex-shrink-0">
+                <Image
+                  src="/icons/timeline-icons/baruch_logo.png"
+                  alt="Baruch"
+                  width={75}
+                  height={75}
+                  className="object-contain transition-opacity duration-300 group-hover:opacity-75"
+                />
+              </div>
             </a>
             <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
               Began undergraduate journey at{" "}
@@ -379,13 +437,15 @@ export function MyTimeline() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/icons/timeline-icons/brooklyn_latin_logo.png"
-                alt="TBLS"
-                width={100}
-                height={100}
-                className="object-contain shadow-md shadow-black/30 rounded-full"
-              />
+              <div className="w-[100px] flex-shrink-0">
+                <Image
+                  src="/icons/timeline-icons/brooklyn_latin_logo.png"
+                  alt="TBLS"
+                  width={75}
+                  height={75}
+                  className="object-contain shadow-md shadow-black/30 rounded-full"
+                />
+              </div>
             </a>
             <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
               Graduated from{" "}
