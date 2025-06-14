@@ -34,22 +34,20 @@ export function AboutMe() {
               <div className="flex-1 flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center justify-between w-full">
                 {/* Text content */}
                 <BoxReveal width="100%" boxColor="#7c92f7" duration={1.1}>
-                  <div className="text-white">
+                  <div className="text-white flex flex-col gap-2">
                     <h3 className="text-2xl font-bold mb-4 text-primary">
-                      Hey, I'm Hasib!
+                      Hello, I'm Hasib!
                     </h3>
                     <p>
-                      I am an undergraduate at Baruch College, where I am
-                      pursuing a Bachelor's degree in Computer Science. Driven
-                      by a passion for technology, I am dedicated to carving out
-                      a future career in the tech world.
+                      I'm a Computer Science student at Baruch College with a big curiosity for tech, particularly in the areas of software engineering, full-stack development, data science, and IT.
                     </p>
                     <p>
-                      Currently, I am actively exploring various avenues within
-                      the field, with particular interests in software engineering, full-stack
-                      development, data science, and IT. My diverse interests reflect my enthusiasm
-                      for innovation and my commitment to continuous learning
-                      and growth in this dynamic and ever-evolving industry.
+                      Right now, I’m diving into different areas of tech to figure out what I enjoy most. 
+                      I love learning new tools, tinkering with projects, and staying up to date in this fast-moving field.
+                    </p>
+                    <p>
+                      Outside of the school and career part, I’m into single-player story games, going to the gym, cooking (mostly experimental recipes), and watching basketball. 
+                      I'm also a caffeine addict and a huge music fan — if it sounds good, I’ll add it to my library, no matter the genre. Always open to recs!
                     </p>
                   </div>
                 </BoxReveal>

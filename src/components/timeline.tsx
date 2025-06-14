@@ -44,6 +44,38 @@ export function MyTimeline() {
       ),
     },
     {
+      title: "April, 2025",
+      content: (
+        <>
+          <CardSpotlight className="mb-8">
+            <div className="flex flex-row items-center gap-4">
+              <a
+                href="https://www.pulp.chat/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="w-[100px] flex-shrink-0">
+                  <Image
+                    src="/icons/timeline-icons/pulp-logo.svg"
+                    alt="Pulp"
+                    width={75}
+                    height={75}
+                    className="object-contain"
+                  />
+                </div>
+              </a>
+              <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
+                Concluded internship with {" "}
+                <LinkPreview url="https://www.pulp.chat/">
+                  Pulp Internet Corporation
+                </LinkPreview>, contributing to core product development, infrastructure, and data visualization across web, mobile, and cloud platforms that enhanced product quality, accelerated development, and strengthened the company’s technical credibility.
+              </p>
+            </div>
+          </CardSpotlight>
+        </>
+      ),
+    },
+    {
       title: "February, 2025",
       content: (
         <>
@@ -200,7 +232,7 @@ export function MyTimeline() {
           <CardSpotlight className="mb-8">
             <div className="flex flex-row items-center gap-4">
               <a
-                href="https://www.pulpinternet.com"
+                href="https://www.pulp.chat/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -216,9 +248,11 @@ export function MyTimeline() {
               </a>
               <p className="text-white dark:text-white text-xl md:text-xl font-normal leading-tight">
                 Began my internship as a Software Engineer Intern at{" "}
-                <LinkPreview url="https://www.pulpinternet.com">
+                <LinkPreview url="https://www.pulp.chat/">
                   Pulp Internet Corporation
-                </LinkPreview>.
+                </LinkPreview>, a subsidiary of <LinkPreview url="https://www.cobaltspeech.com/">
+                  Cobalt Speech & Language
+                </LinkPreview>, a leading provider of speech recognition and natural language processing solutions.
               </p>
             </div>
           </CardSpotlight>
