@@ -36,7 +36,7 @@ export function MyTimeline() {
                 Began internship as a Software Engineer Intern at {" "}
                 <LinkPreview url="https://www.addinextech.com/">
                   Addinex Technologies
-                </LinkPreview>
+                </LinkPreview>.
               </p>
             </div>
           </CardSpotlight>
