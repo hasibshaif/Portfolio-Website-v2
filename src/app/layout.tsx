@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { getCurrentFavicon } from "@/lib/favicon-config";
 
 const kanitRegular = localFont({
   src: "./fonts/Kanit-Bold.ttf",
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon/favicon.png" type="image/svg+xml" />
+        <link rel="icon" href={getCurrentFavicon()} type="image/x-icon" />
         <title>{String(metadata.title ?? "Default Title")}</title>
       </head>
       <body className={`${kanitRegular} antialiased`}>
