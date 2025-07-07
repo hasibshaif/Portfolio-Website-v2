@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { MyTimeline } from "@/components/timeline";
 import { Skills } from "@/components/skills";
-import Projects from "@/components/projects";
+import { Projects } from "@/components/projects";
 import { Footer } from "@/components/footer";
 
 export function ContentSections() {
