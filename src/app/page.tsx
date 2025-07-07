@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import FloatingDoc from "@/components/floating-doc";
 import { MyTimeline } from "@/components/timeline";
 import { Skills } from "@/components/skills";
-import Projects from "@/components/projects";
+import { Projects } from "@/components/projects";
 import { Footer } from "@/components/footer";
 import Particles from "@/components/ui/particles";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";

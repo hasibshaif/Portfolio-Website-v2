@@ -1,5 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-// projects.tsx
+import React from "react";
+import { LinkPreview } from "./ui/link-preview";
 import {
   BriefcaseBusiness,
   Car,
@@ -18,9 +18,8 @@ import {
 } from "lucide-react";
 import { IoIosBowtie } from "react-icons/io";
 import { IoSparklesSharp } from "react-icons/io5";
-import { motion } from "framer-motion";
 
-export default function Projects() {
+export function Projects() {
   const projects = [
     {
       title: "Portfolio Website",
@@ -30,7 +29,6 @@ export default function Projects() {
       deployedLink: "#top",
       repoLink: "https://github.com/hasibshaif/Portfolio-Website",
       gradient: "from-purple-600 via-pink-600 to-red-600",
-      imageSrc: "",
     },
     {
       title: "NEBDHub Transportation Data Science Project",
@@ -146,101 +144,75 @@ export default function Projects() {
   return (
     <section id="projects" className="py-5">
       <div className="flex flex-col gap-4 items-start">
-        {/* Section Header */}
-        <motion.h2 
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 lg:mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          viewport={{ once: true }}
-        >
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 lg:mb-6">
           Projects
-        </motion.h2>
+        </h2>
         
-        {/* Projects Grid */}
-        <div className="w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ 
-                  duration: 0.4, 
-                  delay: index * 0.05
-                }}
-                viewport={{ once: true }}
-                whileHover={{ 
-                  scale: 1.01,
-                  transition: { duration: 0.2 }
-                }}
-              >
-                {/* Gradient background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
-                
-                <div className="relative p-4 sm:p-5 lg:p-6">
-                  {/* Project header */}
-                  <motion.div 
-                    className="flex items-start justify-between mb-3 sm:mb-4 gap-2"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 + 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center gap-2 flex-1 min-w-0">
-                      <div className="flex-shrink-0">
-                        {project.icon}
+        <div className="w-full rounded-xl sm:rounded-2xl border-2 border-gradient-to-r from-[#45006a] via-white to-[#0275d4] bg-gradient-to-r from-[#45006a]/20 via-white/10 to-[#0275d4]/20 p-0.5 sm:p-1">
+          <div className="bg-black/20 rounded-xl sm:rounded-2xl w-full p-3 sm:p-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+              {projects.map((project) => (
+                <div
+                  key={project.title}
+                  className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300"
+                >
+                  {/* Gradient background with reduced opacity for better performance */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-15 transition-opacity duration-300`} />
+                  
+                  <div className="relative p-4 sm:p-5 lg:p-6">
+                    {/* Project header */}
+                    <div className="flex items-start justify-between mb-3 sm:mb-4 gap-2">
+                      <div className="flex items-center gap-2 flex-1 min-w-0">
+                        <div className="flex-shrink-0">
+                          {project.icon}
+                        </div>
+                        <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-200 leading-tight break-words">
+                          {project.title}
+                        </h3>
                       </div>
-                      <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-200 leading-tight break-words">
-                        {project.title}
-                      </h3>
                     </div>
-                  </motion.div>
+                    
+                    {/* Project description */}
+                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4 sm:mb-5">
+                      {project.description}
+                    </p>
 
-                  {/* Project description */}
-                  <motion.p 
-                    className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4 sm:mb-5"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 + 0.2 }}
-                    viewport={{ once: true }}
-                  >
-                    {project.description}
-                  </motion.p>
-
-                  {/* Project links */}
-                  <motion.div 
-                    className="flex flex-wrap gap-2 sm:gap-3"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 + 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    {project.deployedLink && (
+                    {/* Project links */}
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
+                      {project.deployedLink && (
+                        project.title === "Portfolio Website" ? (
+                          <a
+                            href={project.deployedLink}
+                            className="inline-flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200"
+                          >
+                            <Globe size={14} />
+                            Live Demo
+                          </a>
+                        ) : (
+                          <LinkPreview
+                            url={project.deployedLink}
+                            imageSrc={project.imageSrc}
+                            className="inline-flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200"
+                          >
+                            <Globe size={14} />
+                            Live Demo
+                          </LinkPreview>
+                        )
+                      )}
                       <a
-                        href={project.deployedLink}
+                        href={project.repoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200"
+                        className="inline-flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-700 hover:bg-gray-600 text-white text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200"
                       >
-                        <Globe size={14} />
-                        Live Demo
+                        <Github size={14} />
+                        GitHub Repo
                       </a>
-                    )}
-                    <a
-                      href={project.repoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-700 hover:bg-gray-600 text-white text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200"
-                    >
-                      <Github size={14} />
-                      Code
-                    </a>
-                  </motion.div>
+                    </div>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

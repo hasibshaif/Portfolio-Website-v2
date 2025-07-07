@@ -8,10 +8,10 @@ export function ParticlesBackground() {
     <Suspense fallback={null}>
       <Particles
         className="absolute inset-0 z-0"
-        quantity={50}
-        staticity={50}
-        ease={30}
-        size={0.4}
+        quantity={20}
+        staticity={30}
+        ease={20}
+        size={0.3}
         color="#c2f3ff"
       />
     </Suspense>

@@ -7,25 +7,35 @@ import { LinkPreview } from "./ui/link-preview";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 export function MyTimeline() {
+  const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerHeight, setContainerHeight] = useState(0);
 
+  // Calculate height for beam animation
   useEffect(() => {
     const calculateHeight = () => {
-      if (containerRef.current) {
-        const height = containerRef.current.scrollHeight;
-        setContainerHeight(height);
+      if (ref.current) {
+        setContainerHeight(ref.current.scrollHeight);
       }
     };
 
     calculateHeight();
-    window.addEventListener("resize", calculateHeight);
-    return () => window.removeEventListener("resize", calculateHeight);
+  
+    const resizeObserver = new ResizeObserver(() => {
+      calculateHeight();
+    });
+  
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+  
+    return () => resizeObserver.disconnect();
   }, []);
 
+  // Use scroll tracking for beam animation
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"],
+    offset: ["start start", "end end"],
   });
 
   const beamHeight = useTransform(scrollYProgress, [0, 1], [0, containerHeight]);
@@ -34,14 +44,7 @@ export function MyTimeline() {
     {
       title: "May, 2025",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg bg-white/5 border border-white/10 flex-shrink-0"
-          data-timeline-item
-        >
+        <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg bg-white/5 border border-white/10 flex-shrink-0">
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
             <a
               href="https://www.addinextech.com/"
@@ -66,20 +69,13 @@ export function MyTimeline() {
               </LinkPreview>.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "April, 2025",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.pulp.chat/"
@@ -104,20 +100,13 @@ export function MyTimeline() {
               </LinkPreview>, contributing to core product development, infrastructure, and data visualization across web, mobile, and cloud platforms that enhanced product quality, accelerated development, and strengthened the company's technical credibility.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "February, 2025",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://new.mta.info/"
@@ -142,21 +131,14 @@ export function MyTimeline() {
               </LinkPreview>, developing and integrating a digitalized payroll platform to automate a previously manual, paper-based timesheet system.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "January, 2025",
       content: (
         <>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            viewport={{ once: true }}
-            className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-            data-timeline-item
-          >
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="https://linktr.ee/baruchfullstack"
@@ -181,15 +163,8 @@ export function MyTimeline() {
                 </LinkPreview>, the college's premiere software engineering student organization.
               </p>
             </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-            data-timeline-item
-          >
+          </div>
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="https://nebigdatahub.org/"
@@ -216,7 +191,7 @@ export function MyTimeline() {
                 </LinkPreview>, a collaborative research initiative focused on analyzing transportation data to improve urban mobility.
               </p>
             </div>
-          </motion.div>
+          </div>
         </>
       ),
     },
@@ -224,14 +199,7 @@ export function MyTimeline() {
       title: "December, 2024",
       content: (
         <>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            viewport={{ once: true }}
-            className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-            data-timeline-item
-          >
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="https://www.pulp.chat/"
@@ -256,15 +224,8 @@ export function MyTimeline() {
                 </LinkPreview>, contributing to core product development, infrastructure, and data visualization across web, mobile, and cloud platforms.
               </p>
             </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-            data-timeline-item
-          >
+          </div>
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="https://new.mta.info/"
@@ -289,21 +250,14 @@ export function MyTimeline() {
                 </LinkPreview>, NYC's expansive public transit system.
               </p>
             </div>
-          </motion.div>
+          </div>
         </>
       ),
     },
     {
       title: "November, 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://nebigdatahub.org/"
@@ -330,20 +284,13 @@ export function MyTimeline() {
               </LinkPreview>, a collaborative research initiative focused on analyzing transportation data to improve urban mobility.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "October, 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.webacy.com/"
@@ -368,20 +315,13 @@ export function MyTimeline() {
               </LinkPreview> as a Software Engineer Intern, contributing to the development of a web3 security platform and implementing key features for user protection and asset management.
               </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "September, 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.webacy.com/"
@@ -406,20 +346,13 @@ export function MyTimeline() {
               </LinkPreview> as a Software Engineer Intern, working on a web3 security platform to protect users' digital assets and provide comprehensive security solutions.
               </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "August, 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.ccb4a.com/"
@@ -444,20 +377,13 @@ export function MyTimeline() {
               </LinkPreview> as a Software Engineer Intern, contributing to the development of innovative software solutions and gaining valuable experience in modern web technologies.
               </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "July, 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.ccb4a.com/"
@@ -482,20 +408,13 @@ export function MyTimeline() {
               </LinkPreview> as a Software Engineer Intern, working on cutting-edge software development projects and learning modern web technologies.
               </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "June, 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://headstarter.org/"
@@ -520,20 +439,13 @@ export function MyTimeline() {
               </LinkPreview>, contributing to the development of their platform and gaining valuable experience in full-stack development.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "May, 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://headstarter.org/"
@@ -558,20 +470,13 @@ export function MyTimeline() {
               </LinkPreview>, a platform connecting students with tech opportunities.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "2023 - 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.codepath.org/"
@@ -596,20 +501,13 @@ export function MyTimeline() {
               </LinkPreview> Advanced Software Engineering course, gaining hands-on experience with modern web development technologies and best practices.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "2023 - 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.codepath.org/"
@@ -634,20 +532,13 @@ export function MyTimeline() {
               </LinkPreview> Advanced Software Engineering course, focusing on full-stack development and modern web technologies.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "2023 - 2024",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.baruch.cuny.edu/"
@@ -672,20 +563,13 @@ export function MyTimeline() {
               </LinkPreview> to pursue a Bachelor's degree in Computer Science, focusing on software engineering and data science.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
       title: "2022 - 2023",
       content: (
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10"
-          data-timeline-item
-        >
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
               href="https://www.bths.edu/"
@@ -710,7 +594,7 @@ export function MyTimeline() {
               </LinkPreview>, where I developed a strong foundation in critical thinking and academic excellence.
             </p>
           </div>
-        </motion.div>
+        </div>
       ),
     },
   ];
@@ -719,49 +603,43 @@ export function MyTimeline() {
     <section id="timeline" className="py-5">
       <div className="flex flex-col gap-4 items-start">
         {/* Section Header */}
-        <motion.h2 
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 lg:mb-6"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4 }}
-          viewport={{ once: true }}
-        >
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 lg:mb-6">
           Timeline
-        </motion.h2>
+        </h2>
         
-        {/* Timeline Container */}
-        <div className="w-full relative">
-          {/* Vertical Beam */}
-          <motion.div
-            className="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"
-            style={{ height: beamHeight }}
-          />
-          
-          {/* Timeline Items */}
-          <div ref={containerRef} className="relative">
-            {timelineItems.map((item, index) => (
-              <div key={index} className="relative mb-8">
-                {/* Timeline Dot */}
-                <div className="absolute left-4 sm:left-6 top-6 w-3 h-3 bg-blue-500 rounded-full border-2 border-white transform -translate-x-1/2 z-10" />
-                
-                {/* Timeline Content */}
-                <div className="ml-8 sm:ml-12">
-                  {/* Date */}
-                  <motion.div 
-                    className="text-sm sm:text-base font-semibold text-blue-400 mb-2"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3 }}
-                    viewport={{ once: true }}
-                  >
-                    {item.title}
-                  </motion.div>
-                  
-                  {/* Content */}
-                  {item.content}
+        {/* Bordered timeline content with beam animation */}
+        <div className="w-full rounded-xl sm:rounded-2xl border-2 border-gradient-to-r from-[#45006a] via-white to-[#0275d4] bg-gradient-to-r from-[#45006a]/20 via-white/10 to-[#0275d4]/20 p-0.5 sm:p-1">
+          <div className="bg-black/20 rounded-xl sm:rounded-2xl w-full p-3 sm:p-4">
+            <div ref={containerRef} className="relative flex">
+              {/* Timeline beam */}
+              <div className="flex-shrink-0 flex flex-col items-center mr-4 sm:mr-6">
+                <div
+                  className="relative overflow-hidden w-3 sm:w-4"
+                  style={{ height: `${containerHeight}px` }}
+                >
+                  <motion.div
+                    className="absolute inset-x-0 top-0 w-3 sm:w-4 bg-gradient-to-b from-blue-500 via-blue-400 to-transparent rounded-full shadow-lg"
+                    style={{ height: beamHeight }}
+                  />
                 </div>
               </div>
-            ))}
+            
+              {/* Timeline content */}
+              <div ref={ref} className="flex-1 space-y-6 sm:space-y-8">
+                {timelineItems.map((item, index) => (
+                  <div key={index} className="relative">
+                    {/* Timeline dot */}
+                    <div className="absolute -left-8 sm:-left-10 top-4 sm:top-6 w-3 h-3 sm:w-4 sm:h-4 bg-blue-500 rounded-full z-10 shadow-lg border-2 border-white/20"></div>
+                    
+                    {/* Content */}
+                    <div>
+                      <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-blue-400 mb-2">{item.title}</h3>
+                      {item.content}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
