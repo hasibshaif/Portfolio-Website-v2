@@ -10,25 +10,37 @@ const kanitRegular = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Hasib Shaif - Portfolio",
+  title: "Hasib Shaif",
   description: "Computer Science student and software engineer passionate about full-stack development, data science, and emerging technologies.",
   keywords: ["software engineer", "full-stack developer", "data science", "computer science", "portfolio"],
   authors: [{ name: "Hasib Shaif" }],
   creator: "Hasib Shaif",
   openGraph: {
-    title: "Hasib Shaif - Portfolio",
+    title: "Hasib Shaif",
     description: "Computer Science student and software engineer passionate about full-stack development, data science, and emerging technologies.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hasib Shaif - Portfolio",
+    title: "Hasib Shaif",
     description: "Computer Science student and software engineer passionate about full-stack development, data science, and emerging technologies.",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: [
+      { url: '/favicon/favicon1.ico', sizes: 'any' },
+      { url: '/favicon/favicon2.ico', sizes: 'any' },
+      { url: '/favicon/favicon3.ico', sizes: 'any' },
+      { url: '/favicon/favicon4.ico', sizes: 'any' },
+      { url: '/favicon/favicon5.ico', sizes: 'any' },
+      { url: '/favicon/favicon6.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon/favicon5.ico',
+    apple: '/favicon/favicon5.ico',
   },
 };
 
@@ -41,7 +53,6 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <link rel="icon" href={getCurrentFavicon()} type="image/x-icon" />
-        <title>{String(metadata.title ?? "Default Title")}</title>
       </head>
       <body className={`${kanitRegular.variable} antialiased`}>
         {children}
