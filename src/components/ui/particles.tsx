@@ -34,7 +34,7 @@ function hexToRgb(hex: string): number[] {
 
 const Particles: React.FC<ParticlesProps> = ({
   className = "",
-  quantity = 30,
+  quantity = 15,
   staticity = 30,
   size = 0.3,
   refresh = false,

@@ -6,9 +6,9 @@ export function AnimatedTitle() {
   return (
     <motion.p 
       className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 font-semibold"
-      initial={{ y: 30, opacity: 0 }}
+      initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.6 }}
+      transition={{ duration: 0.6, delay: 0.6 }}
     >
       <motion.span
         initial={{ opacity: 0 }}

@@ -20,8 +20,6 @@ import { IoIosBowtie } from "react-icons/io";
 import { IoSparklesSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 
-
-
 export default function Projects() {
   const projects = [
     {
@@ -151,9 +149,9 @@ export default function Projects() {
         {/* Section Header */}
         <motion.h2 
           className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 lg:mb-6"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
         >
           Projects
@@ -166,18 +164,15 @@ export default function Projects() {
               <motion.div
                 key={project.title}
                 className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.6, 
-                  delay: index * 0.1,
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 20
+                  duration: 0.4, 
+                  delay: index * 0.05
                 }}
                 viewport={{ once: true }}
                 whileHover={{ 
-                  scale: 1.02,
+                  scale: 1.01,
                   transition: { duration: 0.2 }
                 }}
               >
@@ -190,7 +185,7 @@ export default function Projects() {
                     className="flex items-start justify-between mb-3 sm:mb-4 gap-2"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 + 0.1 }}
                     viewport={{ once: true }}
                   >
                     <div className="flex items-center gap-2 flex-1 min-w-0">
@@ -201,48 +196,48 @@ export default function Projects() {
                         {project.title}
                       </h3>
                     </div>
-                    
-                    {/* Project links */}
-                    <div className="flex gap-1 sm:gap-2 flex-shrink-0">
-                      {project.deployedLink && (
-                        <motion.a
-                          href={project.deployedLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-1.5 sm:p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors duration-200"
-                          whileHover={{ scale: 1.1, rotate: 5 }}
-                          whileTap={{ scale: 0.9 }}
-                          title="Live Demo"
-                        >
-                          <Globe size={14} className="sm:w-4 sm:h-4" />
-                        </motion.a>
-                      )}
-                      {project.repoLink && (
-                        <motion.a
-                          href={project.repoLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-1.5 sm:p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors duration-200"
-                          whileHover={{ scale: 1.1, rotate: 5 }}
-                          whileTap={{ scale: 0.9 }}
-                          title="View on GitHub"
-                        >
-                          <Github size={14} className="sm:w-4 sm:h-4" />
-                        </motion.a>
-                      )}
-                    </div>
                   </motion.div>
-                  
+
                   {/* Project description */}
                   <motion.p 
-                    className="text-sm sm:text-base text-gray-300 leading-relaxed"
+                    className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4 sm:mb-5"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 + 0.2 }}
                     viewport={{ once: true }}
                   >
                     {project.description}
                   </motion.p>
+
+                  {/* Project links */}
+                  <motion.div 
+                    className="flex flex-wrap gap-2 sm:gap-3"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 + 0.3 }}
+                    viewport={{ once: true }}
+                  >
+                    {project.deployedLink && (
+                      <a
+                        href={project.deployedLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200"
+                      >
+                        <Globe size={14} />
+                        Live Demo
+                      </a>
+                    )}
+                    <a
+                      href={project.repoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-700 hover:bg-gray-600 text-white text-xs sm:text-sm font-medium rounded-lg transition-colors duration-200"
+                    >
+                      <Github size={14} />
+                      Code
+                    </a>
+                  </motion.div>
                 </div>
               </motion.div>
             ))}

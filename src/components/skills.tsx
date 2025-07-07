@@ -94,8 +94,6 @@ const skillCategories = [
   },
 ];
 
-
-
 export function Skills() {
   return (
     <section id="skills" className="py-5">
@@ -103,9 +101,9 @@ export function Skills() {
         {/* Section Header */}
         <motion.h2 
           className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 lg:mb-6"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
         >
           Skills
@@ -118,18 +116,15 @@ export function Skills() {
               <motion.div
                 key={category.name}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-3 sm:p-4 lg:p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.6, 
-                  delay: categoryIndex * 0.1,
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 20
+                  duration: 0.4, 
+                  delay: categoryIndex * 0.05
                 }}
                 viewport={{ once: true }}
                 whileHover={{ 
-                  scale: 1.02,
+                  scale: 1.01,
                   transition: { duration: 0.2 }
                 }}
               >
@@ -137,7 +132,7 @@ export function Skills() {
                   className="text-sm sm:text-base lg:text-xl font-semibold text-blue-400 mb-2 sm:mb-3 lg:mb-4 leading-tight"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: categoryIndex * 0.1 + 0.2 }}
+                  transition={{ duration: 0.4, delay: categoryIndex * 0.05 + 0.1 }}
                   viewport={{ once: true }}
                 >
                   {category.name}
@@ -148,19 +143,15 @@ export function Skills() {
                     <motion.div
                       key={skill.name}
                       className="flex flex-col items-center gap-1 sm:gap-2 p-2 sm:p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors duration-200 group"
-                      initial={{ opacity: 0, scale: 0.8 }}
+                      initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ 
-                        duration: 0.4, 
-                        delay: categoryIndex * 0.1 + skillIndex * 0.05,
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 20
+                        duration: 0.3, 
+                        delay: categoryIndex * 0.05 + skillIndex * 0.02
                       }}
                       viewport={{ once: true }}
                       whileHover={{ 
-                        scale: 1.1,
-                        rotate: 5,
+                        scale: 1.05,
                         transition: { duration: 0.2 }
                       }}
                     >
