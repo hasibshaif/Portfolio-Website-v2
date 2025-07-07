@@ -64,91 +64,58 @@ h2 {
   color: #ffffff;
 }
 
-/* Customize scrollbar for WebKit browsers */
+/* Optimized scrollbar styles */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e1e1e;  /* Track background color */
-  border-radius: 10px;
+  background: #1e1e1e;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #4b5563;  /* Scrollbar thumb color */
-  border-radius: 10px;
-  border: 2px solid #1e1e1e; /* Space around thumb */
+  background-color: #4b5563;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #2563eb; /* Change color on hover */
+  background-color: #2563eb;
 }
 
-/* Customize scrollbar for Firefox */
+/* Firefox scrollbar */
 * {
-  scrollbar-width: thin;           /* Make the scrollbar thin */
-  scrollbar-color: #4b5563 #1e1e1e; /* Thumb color and track color */
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #1e1e1e;
 }
 
-
+/* Timeline image optimization */
 .timeline-image {
   width: 50px;
   height: 50px;
-  object-fit: contain; /* Ensures image scales without distortion */
-  flex-shrink: 0; /* Prevents image from shrinking */
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-.fixed-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh; /* Full height of the viewport */
-  width: 300px; /* Width when expanded */
-  background-color: #1a1a1a; /* Example background */
-  z-index: 100; /* Ensure it's above other elements */
-  overflow-y: auto; /* Allow scrolling if content overflows */
-  transition: width 0.3s ease; /* Smooth transition */
-}
-
-/* Collapsed width */
-.collapsed-sidebar {
-  width: 60px;
-}
-
-/* Main content should shift accordingly */
-.main-content {
-  transition: margin-left 0.3s ease; /* Smooth content shift */
-}
-
-.my-timeline-links a,
-.my-timeline-links LinkPreview {
-  color: #1DA1F2 !important; /* Specific color for the links */
-  text-decoration: underline;
-  transition: color 0.3s ease;
-  font-family: var(--font-kanit-regular);
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-.my-timeline-links a:hover,
-.my-timeline-links LinkPreview:hover {
-  color: #ff4757 !important; /* Hover effect for the links */
-}
-
+/* Link hover effects */
 a:hover img {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
-/* Ensure smooth transitions on <img> */
 a img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease;
   display: block;
 }
 
-/* Optional: Add a slight opacity effect */
-a:hover {
+/* Global link hover effect - only for external links without specific styling */
+a[href^="http"]:not([class*="text-"]) {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+a[href^="http"]:not([class*="text-"]):hover {
+  color: #60a5fa;
   opacity: 0.9;
 }
 
@@ -158,5 +125,18 @@ a:hover {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Animated gradient keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
