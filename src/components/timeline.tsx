@@ -44,32 +44,95 @@ export function MyTimeline() {
     {
       title: "May, 2025",
       content: (
-        <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg bg-white/5 border border-white/10 flex-shrink-0">
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-            <a
-              href="https://www.addinextech.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 flex items-center justify-center"
-            >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
-                <Image
-                  src="/icons/timeline-icons/addinex-logo.jpg"
-                  alt="Addinex Technologies"
-                  width={80}
-                  height={80}
-                  className="object-contain rounded-lg"
-                />
-              </div>
-            </a>
-            <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed flex-1">
-              Began internship as a Software Engineer Intern at {" "}
-              <LinkPreview url="https://www.addinextech.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                Addinex Technologies
-              </LinkPreview>.
-            </p>
+        <>
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://www.addinextech.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 flex items-center justify-center"
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                  <Image
+                    src="/icons/timeline-icons/addinex-logo.jpg"
+                    alt="Addinex Technologies"
+                    width={80}
+                    height={80}
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+              </a>
+              <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+                Began internship as a Software Engineer Intern at {" "}
+                <LinkPreview url="https://www.addinextech.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Addinex Technologies
+                </LinkPreview>.
+              </p>
+            </div>
           </div>
-        </div>
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://www.codepath.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 flex items-center justify-center"
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                  <Image
+                    src="/icons/timeline-icons/codepath-logo.png"
+                    alt="CodePath"
+                    width={80}
+                    height={80}
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+              </a>
+              <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+                Concluded role as Tech Fellow and Teaching Assistant at {" "}
+                <LinkPreview url="https://www.codepath.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  CodePath
+                </LinkPreview>, mentoring students in technical interviewing prep {" "}
+                <LinkPreview url="https://www.codepath.org/courses/tech-interview-prep" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  (TIP 101)
+                </LinkPreview> and web development fundamentals {" "}
+                <LinkPreview url="https://www.codepath.org/courses/web-development" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  (WEB 101)
+                </LinkPreview>.
+              </p>
+            </div>
+          </div>
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://studentaffairs.baruch.cuny.edu/starr-career-development-center/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 flex items-center justify-center"
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                  <Image
+                    src="/icons/timeline-icons/baruch_starr_logo.png"
+                    alt="Baruch Starr Career Center"
+                    width={80}
+                    height={80}
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+              </a>
+              <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+                Concluded the {" "}
+                <LinkPreview url="https://studentaffairs.baruch.cuny.edu/starr-career-development-center/leadership-programs/technology-leadership-development/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Technology Leadership Development Program (TLDP)
+                </LinkPreview> at {" "}
+                <LinkPreview url="https://studentaffairs.baruch.cuny.edu/starr-career-development-center/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Baruch College's Starr Career Center
+                </LinkPreview>, building strong leadership, communication, and technical skills.
+              </p>
+            </div>
+          </div>
+        </>
       ),
     },
     {
@@ -94,10 +157,10 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Concluded internship with {" "}
+              Concluded internship as a Software Engineer Intern at {" "}
               <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Pulp Internet Corporation
-              </LinkPreview>, contributing to core product development, infrastructure, and data visualization across web, mobile, and cloud platforms that enhanced product quality, accelerated development, and strengthened the company's technical credibility.
+              </LinkPreview>, contributing to developing core products, securing investments, creating data vizualizations, and building infrastructure across web, mobile, and cloud platforms.
             </p>
           </div>
         </div>
@@ -125,10 +188,10 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Concluded winter internship with the {" "}
+              Concluded internship as a Technology Analyst Intern at the {" "}
               <LinkPreview url="https://new.mta.info/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Metropolitan Transportation Authority (MTA)
-              </LinkPreview>, developing and integrating a digitalized payroll platform to automate a previously manual, paper-based timesheet system.
+              </LinkPreview>, developing and integrating a digitalized payroll platform to replace a previously manual, paper-based timesheet system.
             </p>
           </div>
         </div>
@@ -145,24 +208,24 @@ export function MyTimeline() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 flex items-center justify-center"
-              >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                  <Image
-                    src="/icons/timeline-icons/bfs_logo.svg"
-                    alt="BFS"
-                    width={80}
-                    height={80}
-                    className="object-contain rounded-lg"
-                  />
-                </div>
-              </a>
-              <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-                Co-founded {" "}
-                <LinkPreview url="https://linktr.ee/baruchfullstack" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                  Baruch Full Stack (BFS)
-                </LinkPreview>, the college's premiere software engineering student organization.
-              </p>
-            </div>
+            >
+              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                <Image
+                  src="/icons/timeline-icons/bfs_logo.svg"
+                  alt="BFS"
+                  width={80}
+                  height={80}
+                  className="object-contain rounded-lg"
+                />
+              </div>
+            </a>
+            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+              Co-founded {" "}
+              <LinkPreview url="https://linktr.ee/baruchfullstack" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                Baruch Full Stack (BFS)
+              </LinkPreview>, the college's premiere software engineering student organization.
+            </p>
+          </div>
           </div>
           <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -184,11 +247,9 @@ export function MyTimeline() {
               </a>
               <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
                 Concluded the {" "}
-                <LinkPreview url="https://nebigdatahub.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                  Northeast Big Data Innovation Hub's
-                </LinkPreview> <LinkPreview url="https://nebigdatahub.org/nsdc/tdsp/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                  Transportation Data Science Project (TDSP)
-                </LinkPreview>, a collaborative research initiative focused on analyzing transportation data to improve urban mobility.
+                <LinkPreview url="https://nebigdatahub.org/nsdc/tdsp/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Technology Data Science Project (TDSP)
+                </LinkPreview>, processing and analyzing 2M+ traffic records and creating data vizualizations to provide actionable insights.
               </p>
             </div>
           </div>
@@ -202,15 +263,15 @@ export function MyTimeline() {
           <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
-                href="https://www.pulp.chat/"
+                href="https://nebigdatahub.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 flex items-center justify-center"
               >
                 <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
                   <Image
-                    src="/icons/timeline-icons/pulp-logo.svg"
-                    alt="Pulp"
+                    src="/icons/timeline-icons/nebdhub-logo.png"
+                    alt="NEBDHUB"
                     width={80}
                     height={80}
                     className="object-contain rounded-lg"
@@ -218,10 +279,12 @@ export function MyTimeline() {
                 </div>
               </a>
               <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-                Began seasonal internship as a Software Engineer Intern at {" "}
-                <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                  Pulp Internet Corporation
-                </LinkPreview>, contributing to core product development, infrastructure, and data visualization across web, mobile, and cloud platforms.
+                Began the {" "}
+                <LinkPreview url="https://nebigdatahub.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Northeast Big Data Innovation Hub's
+                </LinkPreview> <LinkPreview url="https://nebigdatahub.org/nsdc/tdsp/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Transportation Data Science Project (TDSP)
+                </LinkPreview>, a collaborative research initiative focused on analyzing transportation data to improve urban mobility.
               </p>
             </div>
           </div>
@@ -244,7 +307,7 @@ export function MyTimeline() {
                 </div>
               </a>
               <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-                Began winter internship with the {" "}
+                Began internship as a Technology Analyst Intern at the {" "}
                 <LinkPreview url="https://new.mta.info/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                   Metropolitan Transportation Authority (MTA)
                 </LinkPreview>, NYC's expansive public transit system.
@@ -255,84 +318,20 @@ export function MyTimeline() {
       ),
     },
     {
-      title: "November, 2024",
-      content: (
-        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
-              href="https://nebigdatahub.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 flex items-center justify-center"
-            >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                <Image
-                  src="/icons/timeline-icons/nebdhub-logo.png"
-                  alt="NEBDHUB"
-                  width={80}
-                  height={80}
-                  className="object-contain rounded-lg"
-                />
-              </div>
-            </a>
-            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Began the {" "}
-              <LinkPreview url="https://nebigdatahub.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                Northeast Big Data Innovation Hub's
-              </LinkPreview> <LinkPreview url="https://nebigdatahub.org/nsdc/tdsp/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                Transportation Data Science Project (TDSP)
-              </LinkPreview>, a collaborative research initiative focused on analyzing transportation data to improve urban mobility.
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "October, 2024",
-      content: (
-        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
-              href="https://www.webacy.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 flex items-center justify-center"
-            >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                <Image
-                  src="/icons/timeline-icons/webacy-logo.png"
-                  alt="Webacy"
-                  width={80}
-                  height={80}
-                  className="object-contain rounded-lg"
-                />
-              </div>
-            </a>
-            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Concluded internship with {" "}
-              <LinkPreview url="https://www.webacy.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                Webacy
-              </LinkPreview> as a Software Engineer Intern, contributing to the development of a web3 security platform and implementing key features for user protection and asset management.
-              </p>
-          </div>
-        </div>
-      ),
-    },
-    {
       title: "September, 2024",
       content: (
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="https://www.webacy.com/"
+              href="https://www.pulp.chat/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center justify-center"
             >
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
                 <Image
-                  src="/icons/timeline-icons/webacy-logo.png"
-                  alt="Webacy"
+                  src="/icons/timeline-icons/pulp-logo.svg"
+                  alt="Pulp"
                   width={80}
                   height={80}
                   className="object-contain rounded-lg"
@@ -340,11 +339,14 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Began internship with {" "}
-              <LinkPreview url="https://www.webacy.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                Webacy
-              </LinkPreview> as a Software Engineer Intern, working on a web3 security platform to protect users' digital assets and provide comprehensive security solutions.
-              </p>
+              Began internship as a Software Engineer Intern at {" "}
+              <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                Pulp Internet Corporation
+              </LinkPreview>, a subsidiary of {" "}
+              <LinkPreview url="https://cobaltspeech.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                Cobalt Speech & Language
+              </LinkPreview>, working on innovative software solutions and modern web technologies.
+            </p>
           </div>
         </div>
       ),
@@ -355,15 +357,15 @@ export function MyTimeline() {
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="https://www.ccb4a.com/"
+              href="https://studentaffairs.baruch.cuny.edu/starr-career-development-center/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center justify-center"
             >
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
                 <Image
-                  src="/icons/timeline-icons/ccb4a-logo.webp"
-                  alt="CCB4A"
+                  src="/icons/timeline-icons/baruch_starr_logo.png"
+                  alt="Baruch Starr Career Center"
                   width={80}
                   height={80}
                   className="object-contain rounded-lg"
@@ -371,72 +373,13 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Concluded internship with {" "}
-              <LinkPreview url="https://www.ccb4a.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                CCB4A
-              </LinkPreview> as a Software Engineer Intern, contributing to the development of innovative software solutions and gaining valuable experience in modern web technologies.
-              </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "July, 2024",
-      content: (
-        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
-              href="https://www.ccb4a.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 flex items-center justify-center"
-            >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                <Image
-                  src="/icons/timeline-icons/ccb4a-logo.webp"
-                  alt="CCB4A"
-                  width={80}
-                  height={80}
-                  className="object-contain rounded-lg"
-                />
-              </div>
-            </a>
-            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Began internship with {" "}
-              <LinkPreview url="https://www.ccb4a.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                CCB4A
-              </LinkPreview> as a Software Engineer Intern, working on cutting-edge software development projects and learning modern web technologies.
-              </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "June, 2024",
-      content: (
-        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
-              href="https://headstarter.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 flex items-center justify-center"
-            >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                <Image
-                  src="/icons/timeline-icons/headstarter-logo.png"
-                  alt="Headstarter"
-                  width={80}
-                  height={80}
-                  className="object-contain rounded-lg"
-                />
-              </div>
-            </a>
-            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Concluded internship as a Software Engineer Intern at {" "}
-              <LinkPreview url="https://headstarter.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                Headstarter
-              </LinkPreview>, contributing to the development of their platform and gaining valuable experience in full-stack development.
+              Selected as 1 of 35 students for the {" "}
+              <LinkPreview url="https://studentaffairs.baruch.cuny.edu/starr-career-development-center/leadership-programs/technology-leadership-development/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                Technology Leadership Development Program (TLDP)
+              </LinkPreview> at {" "}
+              <LinkPreview url="https://studentaffairs.baruch.cuny.edu/starr-career-development-center/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                Baruch College's Starr Career Center
+              </LinkPreview>, a selective program for developing leadership skills for aspiring technology professionals.
             </p>
           </div>
         </div>
@@ -445,49 +388,77 @@ export function MyTimeline() {
     {
       title: "May, 2024",
       content: (
-        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a
-              href="https://headstarter.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 flex items-center justify-center"
-            >
-              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                <Image
-                  src="/icons/timeline-icons/headstarter-logo.png"
-                  alt="Headstarter"
-                  width={80}
-                  height={80}
-                  className="object-contain rounded-lg"
-                />
-              </div>
-            </a>
-            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Began internship as a Software Engineer Intern at {" "}
-              <LinkPreview url="https://headstarter.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                Headstarter
-              </LinkPreview>, a platform connecting students with tech opportunities.
-            </p>
+        <>
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://www.webacy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 flex items-center justify-center"
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                  <Image
+                    src="/icons/timeline-icons/webacy-logo.png"
+                    alt="Webacy"
+                    width={80}
+                    height={80}
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+              </a>
+              <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+                Concluded externship as a Data Analytics Extern at {" "}
+                <LinkPreview url="https://www.webacy.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Webacy
+                </LinkPreview>, contributing to analyzing and labeling smart-contract vulnerabilities to uncover patterns and risk profiles..
+              </p>
+            </div>
           </div>
-        </div>
+          <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://www.codepath.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 flex items-center justify-center"
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                  <Image
+                    src="/icons/timeline-icons/codepath-logo.png"
+                    alt="CodePath"
+                    width={80}
+                    height={80}
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+              </a>
+              <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+                Began working as a Tech Fellow and Teaching Assistant at {" "}
+                <LinkPreview url="https://www.codepath.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  CodePath
+                </LinkPreview>, mentoring students in CodePath curriculums.
+              </p>
+            </div>
+          </div>
+        </>
       ),
     },
     {
-      title: "2023 - 2024",
+      title: "April, 2024",
       content: (
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="https://www.codepath.org/"
+              href="https://www.webacy.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center justify-center"
             >
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
                 <Image
-                  src="/icons/timeline-icons/codepath-logo.png"
-                  alt="CodePath"
+                  src="/icons/timeline-icons/webacy-logo.png"
+                  alt="Webacy"
                   width={80}
                   height={80}
                   className="object-contain rounded-lg"
@@ -495,30 +466,30 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Completed {" "}
-              <LinkPreview url="https://www.codepath.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                CodePath's
-              </LinkPreview> Advanced Software Engineering course, gaining hands-on experience with modern web development technologies and best practices.
+              Became a Data Analytics Extern at {" "}
+              <LinkPreview url="https://www.webacy.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                Webacy
+              </LinkPreview>.
             </p>
           </div>
         </div>
       ),
     },
     {
-      title: "2023 - 2024",
+      title: "May, 2023",
       content: (
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="https://www.codepath.org/"
+              href="https://www.cuny.edu/academics/current-initiatives/k16/college-career-bridge-for-all/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center justify-center"
             >
               <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
                 <Image
-                  src="/icons/timeline-icons/codepath-logo.png"
-                  alt="CodePath"
+                  src="/icons/timeline-icons/ccb4a-logo.webp"
+                  alt="CCB4A"
                   width={80}
                   height={80}
                   className="object-contain rounded-lg"
@@ -526,17 +497,17 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Completed {" "}
-              <LinkPreview url="https://www.codepath.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                CodePath's
-              </LinkPreview> Advanced Software Engineering course, focusing on full-stack development and modern web technologies.
+              Began working as a Database Administrator and Career Coach at {" "}
+              <LinkPreview url="https://www.cuny.edu/academics/current-initiatives/k16/college-career-bridge-for-all/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                CCB4A
+              </LinkPreview>.
             </p>
           </div>
         </div>
       ),
     },
     {
-      title: "2023 - 2024",
+      title: "August, 2022",
       content: (
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -557,17 +528,17 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Enrolled at {" "}
+              Began undergraduate journey at {" "}
               <LinkPreview url="https://www.baruch.cuny.edu/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Baruch College
-              </LinkPreview> to pursue a Bachelor's degree in Computer Science, focusing on software engineering and data science.
+              </LinkPreview> to pursue a Bachelor's degree in Computer Science.
             </p>
           </div>
         </div>
       ),
     },
     {
-      title: "2022 - 2023",
+      title: "June, 2022",
       content: (
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -591,7 +562,7 @@ export function MyTimeline() {
               Graduated from {" "}
               <LinkPreview url="https://www.bths.edu/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 The Brooklyn Latin School
-              </LinkPreview>, where I developed a strong foundation in critical thinking and academic excellence.
+              </LinkPreview> with an IB Diploma and Advanced Regents Diploma.
             </p>
           </div>
         </div>
