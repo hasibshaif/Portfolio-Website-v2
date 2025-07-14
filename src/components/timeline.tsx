@@ -157,10 +157,10 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Concluded internship as a Software Engineer Intern at {" "}
+              Concluded internship as a Software Engineer & Product Management Intern at {" "}
               <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Pulp Internet Corporation
-              </LinkPreview>, contributing to developing core products, securing investments, creating data vizualizations, and building infrastructure across web, mobile, and cloud platforms.
+              </LinkPreview>, contributing to core product development, leading Agile sprints, securing investments, visualizing data, and building infrastructure across web, mobile, and cloud platforms.
             </p>
           </div>
         </div>
@@ -339,13 +339,13 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Began internship as a Software Engineer Intern at {" "}
+              Began internship as a Software Engineer Intern & Product Management Intern at {" "}
               <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Pulp Internet Corporation
               </LinkPreview>, a subsidiary of {" "}
               <LinkPreview url="https://cobaltspeech.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Cobalt Speech & Language
-              </LinkPreview>, working on innovative software solutions and modern web technologies.
+              </LinkPreview>.
             </p>
           </div>
         </div>
