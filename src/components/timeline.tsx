@@ -543,7 +543,7 @@ export function MyTimeline() {
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="https://www.bths.edu/"
+              href="https://www.brooklynlatin.org/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center justify-center"
@@ -560,7 +560,7 @@ export function MyTimeline() {
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
               Graduated from {" "}
-              <LinkPreview url="https://www.bths.edu/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+              <LinkPreview url="https://www.brooklynlatin.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 The Brooklyn Latin School
               </LinkPreview> with an IB Diploma and Advanced Regents Diploma.
             </p>
