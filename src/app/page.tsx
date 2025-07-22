@@ -269,7 +269,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 1 }}
                 className="whitespace-normal"
               >
-                Hi! I&apos;m Hasib, a CS Undergrad at Baruch College. I&apos;m passionate about building innovative solutions and turning data into actionable insights.
+                Hi! I&apos;m Hasib, a CS Undergrad at Baruch College.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -277,7 +277,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 1.2 }}
                 className="mt-2 whitespace-normal"
               >
-                I love exploring the intersection of technology and business, with particular interests in software engineering, full-stack development, and risk management, but always open to new opportunities.
+                I'm passionate about exploring the intersection of technology and business, with particular interests in software engineering, full-stack development, project management, and IT. Always open to new connections and new opportunities!
               </motion.p>
             </motion.div>
 
