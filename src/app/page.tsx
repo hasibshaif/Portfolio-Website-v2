@@ -277,7 +277,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 1.2 }}
                 className="mt-2 whitespace-normal"
               >
-                I'm passionate about exploring the intersection of technology and business, with particular interests in software engineering, full-stack development, project management, and IT. Always open to new connections and new opportunities!
+                I&apos;m passionate about exploring the intersection of technology and business, with particular interests in software engineering, full-stack development, project management, and IT. Always open to new connections and new opportunities!
               </motion.p>
             </motion.div>
 
