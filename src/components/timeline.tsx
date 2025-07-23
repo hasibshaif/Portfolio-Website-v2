@@ -157,7 +157,7 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Concluded internship as a Software Engineer & Product Management Intern at {" "}
+              Concluded internship as a Software Engineer & Project Management Intern at {" "}
               <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Pulp Internet Corporation
               </LinkPreview>, contributing to core product development, leading Agile sprints, securing investments, visualizing data, and building infrastructure across web, mobile, and cloud platforms.
@@ -248,7 +248,7 @@ export function MyTimeline() {
               <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
                 Concluded the {" "}
                 <LinkPreview url="https://nebigdatahub.org/nsdc/tdsp/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
-                  Technology Data Science Project (TDSP)
+                  Transportation Data Science Project (TDSP)
                 </LinkPreview>, processing and analyzing 2M+ traffic records and creating data vizualizations to provide actionable insights.
               </p>
             </div>
@@ -339,7 +339,7 @@ export function MyTimeline() {
               </div>
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
-              Began internship as a Software Engineer Intern & Product Management Intern at {" "}
+              Began internship as a Software Engineer Intern & Project Management Intern at {" "}
               <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Pulp Internet Corporation
               </LinkPreview>, a subsidiary of {" "}
