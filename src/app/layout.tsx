@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import { getCurrentFavicon } from "@/lib/favicon-config";
 
@@ -55,6 +56,19 @@ export default function RootLayout({
         <link rel="icon" href={getCurrentFavicon()} type="image/x-icon" />
       </head>
       <body className={`${kanitRegular.variable} antialiased`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZJ8ZLNZ1V8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZJ8ZLNZ1V8');
+          `}
+        </Script>
         {children}
       </body>
     </html>
