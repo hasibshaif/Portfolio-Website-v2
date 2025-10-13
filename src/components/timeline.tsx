@@ -42,6 +42,75 @@ export function MyTimeline() {
 
   const timelineItems = [
     {
+      title: "October, 2025",
+      content: (
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <a
+              href="https://www.jpmorganchase.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 flex items-center justify-center"
+            >
+              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                <Image
+                  src="/icons/timeline-icons/jpmc-logo.png"
+                  alt="JPMorgan Chase"
+                  width={80}
+                  height={80}
+                  className="object-contain rounded-lg"
+                />
+              </div>
+            </a>
+            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+              Participated in {" "}
+              <LinkPreview url="https://www.jpmorganchase.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  JPMorgan Chase
+                </LinkPreview>'s {" "}
+                <LinkPreview url="https://www.jpmorganchase.com/careers/explore-opportunities/programs/tfsg-hackathons" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Code for Good Hackathon
+                </LinkPreview>
+                {" "}2025 in Plano, TX, building a cross-platform React Native app for {" "}
+                  <LinkPreview url="https://www.teamimpact.org/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Team IMPACT
+                </LinkPreview>, a nonprofit organization that fosters meaningful connections between children with chronic illnesses and college athletes. The app aimed at solving their challenge of maintaining connections and engagement with college sports teams.
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "August, 2025",
+      content: (
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <a
+              href="https://www.addinextech.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 flex items-center justify-center"
+            >
+              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                <Image
+                  src="/icons/timeline-icons/addinex-logo.jpg"
+                  alt="Addinex Technologies"
+                  width={80}
+                  height={80}
+                  className="object-contain rounded-lg"
+                />
+              </div>
+            </a>
+            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+              Concluded internship with {" "}
+              <LinkPreview url="https://www.addinextech.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+                  Addinex Technologies
+                </LinkPreview>, building a web portal for clinicians and researchers for clinical studies, using Dockerized micro-services, building and testing HIPAA-compliant REST APIs, and setting up CI/CD workflows.
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "May, 2025",
       content: (
         <>
