@@ -4,6 +4,7 @@ import {
   BriefcaseBusiness,
   Car,
   BotMessageSquare,
+  Braces,
   Croissant,
   HandCoins,
   Calculator,
@@ -29,6 +30,15 @@ export function Projects() {
       deployedLink: "#top",
       repoLink: "https://github.com/hasibshaif/Portfolio-Website",
       gradient: "from-purple-600 via-pink-600 to-red-600",
+    },
+    {
+      title: "Baruch Full Stack Website (BFS)",
+      icon: <Braces size={20} />,
+      description:
+        "Official website for the Baruch Full Stack club built with Next.js, Tailwind CSS, and Framer Motion to capture the club’s modern, animated branding. Integrates AWS S3 to dynamically fetch and display gallery content.",
+      deployedLink: "https://bfs-website-liart.vercel.app/",
+      repoLink: "https://github.com/hasibshaif/bfs-website",
+      gradient: "from-blue-700 via-blue-500 to-cyan-500",
     },
     {
       title: "NEBDHub Transportation Data Science Project",
