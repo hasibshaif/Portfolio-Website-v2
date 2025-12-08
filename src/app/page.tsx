@@ -269,7 +269,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 1 }}
                 className="whitespace-normal"
               >
-                Hi! I&apos;m Hasib, a CS Undergrad at Baruch College.
+                Hi! I&apos;m Hasib.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -298,7 +298,11 @@ export default function Home() {
                   className="relative inline-flex h-14 sm:h-16 lg:h-18 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open("/documents/Hasib Shaif - Resume.pdf", "_blank")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.open("/documents/Hasib Shaif - Resume.pdf", "_blank");
+                  }}
                 >
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-6 sm:px-8 lg:px-10 text-sm sm:text-base lg:text-lg font-medium text-white backdrop-blur-3xl">
