@@ -69,6 +69,14 @@ export function Projects() {
       imageSrc: "/img/link-previews/projects/tAIlor-preview.PNG",
     },
     {
+      title: "Backtesting Engine Dashboard",
+      icon: <TrendingUp size={20} />,
+      description:
+        "Full-stack Flask and React trading backtester using SQLite data from yfinance API. Features performance metrics (returns, volatility, drawdown), Matplotlib/Recharts visualizations, custom Python algorithm execution, and multi-ticker comparison for portfolio analysis.",
+      repoLink: "https://github.com/hasibshaif/backtesting-engine",
+      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+    },
+    {
       title: "Kronicle",
       icon: <Calendar size={20} />,
       description:
