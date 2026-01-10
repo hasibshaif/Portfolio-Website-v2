@@ -210,7 +210,7 @@ export function MyTimeline() {
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="https://www.pulp.chat/"
+              href="https://pulp.com.ai/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center justify-center"
@@ -227,7 +227,7 @@ export function MyTimeline() {
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
               Concluded internship as a Software Engineer & Project Management Intern at {" "}
-              <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+              <LinkPreview url="https://pulp.com.ai/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Pulp Internet Corporation
               </LinkPreview>, contributing to core product development, leading Agile sprints, securing investments, visualizing data, and building infrastructure across web, mobile, and cloud platforms.
             </p>
@@ -392,7 +392,7 @@ export function MyTimeline() {
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a
-              href="https://www.pulp.chat/"
+              href="https://pulp.com.ai/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center justify-center"
@@ -409,7 +409,7 @@ export function MyTimeline() {
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
               Began internship as a Software Engineer Intern & Project Management Intern at {" "}
-              <LinkPreview url="https://www.pulp.chat/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+              <LinkPreview url="https://pulp.com.ai/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Pulp Internet Corporation
               </LinkPreview>, a subsidiary of {" "}
               <LinkPreview url="https://cobaltspeech.com/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
