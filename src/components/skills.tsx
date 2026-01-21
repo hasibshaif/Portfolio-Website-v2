@@ -6,11 +6,11 @@ import Image from "next/image";
 export function Skills() {
   const skillCategories = [
     {
-      title: "Programming Languages",
+      title: "Coding Languages",
       skills: [
+        { name: "Python", icon: "/icons/skills-icons/python-color.svg" },
         { name: "JavaScript", icon: "/icons/skills-icons/javascript-color.svg" },
         { name: "TypeScript", icon: "/icons/skills-icons/typescript-color.svg" },
-        { name: "Python", icon: "/icons/skills-icons/python-color.svg" },
         { name: "C++", icon: "/icons/skills-icons/cplusplus-color.svg" },
         { name: "HTML5", icon: "/icons/skills-icons/html5-color.svg" },
         { name: "CSS3", icon: "/icons/skills-icons/css3-color.svg" },
@@ -31,51 +31,68 @@ export function Skills() {
       title: "Backend Development",
       skills: [
         { name: "Node.js", icon: "/icons/skills-icons/nodedotjs-color.svg" },
+        { name: "Express.js", icon: "/icons/skills-icons/expressdotjs-color.svg" },
         { name: "NestJS", icon: "/icons/skills-icons/nestjs-color.svg" },
+        { name: "Flask", icon: "/icons/skills-icons/flask-color.svg" },
+      ],
+    },
+    {
+      title: "Database Management",
+      skills: [
+        { name: "SQL", icon: "/icons/skills-icons/sql.svg" },
         { name: "PostgreSQL", icon: "/icons/skills-icons/postgre-color.svg" },
         { name: "MongoDB", icon: "/icons/skills-icons/mongodb-color.svg" },
-        { name: "SQL", icon: "/icons/skills-icons/sql.svg" },
       ],
     },
     {
       title: "Cloud & DevOps",
       skills: [
         { name: "AWS", icon: "/icons/skills-icons/aws-color.svg" },
+        { name: "S3", icon: "/icons/skills-icons/s3-color.svg" },
         { name: "Docker", icon: "/icons/skills-icons/docker-color.svg" },
         { name: "Firebase", icon: "/icons/skills-icons/firebase-color.svg" },
         { name: "Vercel", icon: "/icons/skills-icons/vercel-color.svg" },
-        { name: "S3", icon: "/icons/skills-icons/s3-color.svg" },
+        { name: "Clerk", icon: "/icons/skills-icons/clerk-color.svg" },
       ],
     },
     {
-      title: "Data Science & AI",
+      title: "Data Science",
       skills: [
         { name: "Pandas", icon: "/icons/skills-icons/pandas-color.svg" },
         { name: "NumPy", icon: "/icons/skills-icons/numpy-color.svg" },
         { name: "Matplotlib", icon: "/icons/skills-icons/matplotlib-color.svg" },
         { name: "Seaborn", icon: "/icons/skills-icons/seaborn-color.svg" },
-        { name: "D3.js", icon: "/icons/skills-icons/d3-color.svg" },
         { name: "Jupyter", icon: "/icons/skills-icons/jupyter-color.svg" },
-        { name: "Selenium", icon: "/icons/skills-icons/selenium-color.svg" },
+      ],
+    },
+    {
+      title: "AI & Machine Learning",
+      skills: [
         { name: "OpenAI", icon: "/icons/skills-icons/openai-color.svg" },
         { name: "LangChain", icon: "/icons/skills-icons/langchain-color.svg" },
         { name: "Pinecone", icon: "/icons/skills-icons/pinecone.svg" },
       ],
     },
     {
-      title: "Design & Creative",
+      title: "Data Visualization",
+      skills: [
+        { name: "D3.js", icon: "/icons/skills-icons/d3-color.svg" },
+        { name: "Tableau", icon: "/icons/skills-icons/tableau-color.svg" },
+        { name: "Power BI", icon: "/icons/skills-icons/powerbi-color.svg" },
+      ],
+    },
+    {
+      title: "Design Tools",
       skills: [
         { name: "Figma", icon: "/icons/skills-icons/figma-color.svg" },
         { name: "Adobe Photoshop", icon: "/icons/skills-icons/adobephotoshop-color.svg" },
         { name: "Adobe Premiere Pro", icon: "/icons/skills-icons/adobepremierepro-color.svg" },
         { name: "DaVinci Resolve", icon: "/icons/skills-icons/davinciresolve-color.svg" },
         { name: "Canva", icon: "/icons/skills-icons/canva-color.svg" },
-        { name: "Tableau", icon: "/icons/skills-icons/tableau-color.svg" },
-        { name: "Power BI", icon: "/icons/skills-icons/powerbi-color.svg" },
       ],
     },
     {
-      title: "Tools & Platforms",
+      title: "Development Tools",
       skills: [
         { name: "Git", icon: "/icons/skills-icons/git-color.svg" },
         { name: "GitHub", icon: "/icons/skills-icons/github-color.svg" },
@@ -83,9 +100,17 @@ export function Skills() {
         { name: "PyCharm", icon: "/icons/skills-icons/pycharm-color.svg" },
         { name: "Postman", icon: "/icons/skills-icons/postman-color.svg" },
         { name: "Cursor", icon: "/icons/skills-icons/cursor-color.svg" },
+        { name: "Selenium", icon: "/icons/skills-icons/selenium-color.svg" },
+      ],
+    },
+    {
+      title: "Productivity & Collaboration",
+      skills: [
+        { name: "Notion", icon: "/icons/skills-icons/notion-color.svg" },
+        { name: "Slack", icon: "/icons/skills-icons/slack-color.svg" },
+        { name: "Jira", icon: "/icons/skills-icons/jira-color.svg" },
         { name: "Microsoft Office", icon: "/icons/skills-icons/microsoft-office.svg" },
         { name: "Google Drive", icon: "/icons/skills-icons/googledrive-color.svg" },
-        { name: "Clerk", icon: "/icons/skills-icons/clerk-color.svg" },
       ],
     },
     {
@@ -119,7 +144,7 @@ export function Skills() {
                         key={skillIndex}
                         className="flex flex-col items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors duration-200"
                       >
-                        <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white p-1.5">
                           <Image
                             src={skill.icon}
                             alt={skill.name}
