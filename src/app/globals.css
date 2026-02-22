@@ -128,6 +128,29 @@ a[href^="http"]:not([class*="text-"]):hover {
   }
 }
 
+/* Purple Glass custom cursors */
+html {
+  cursor: url("/icons/cursor-icons/purpleglass-cursor.cur"), auto;
+}
+
+a,
+button,
+[role="button"],
+[type="button"],
+[type="submit"] {
+  cursor: url("/icons/cursor-icons/purpleglass-link-select.cur"), pointer;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  cursor: url("/icons/cursor-icons/purpleglass-text.cur"), text;
+}
+
+.cursor-resize-vertical {
+  cursor: url("/icons/cursor-icons/purpleglass-vertical-resize.cur"), ns-resize;
+}
+
 /* Animated gradient keyframes */
 @keyframes gradientShift {
   0% {
