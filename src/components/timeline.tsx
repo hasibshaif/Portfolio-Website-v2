@@ -273,7 +273,7 @@ export function MyTimeline() {
           <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
-                href="https://linktr.ee/baruchfullstack"
+                href="https://bfs-website-liart.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 flex items-center justify-center"
@@ -290,7 +290,7 @@ export function MyTimeline() {
             </a>
             <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
               Co-founded {" "}
-              <LinkPreview url="https://linktr.ee/baruchfullstack" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
+              <LinkPreview url="https://bfs-website-liart.vercel.app/" className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50">
                 Baruch Full Stack (BFS)
               </LinkPreview>, the college's premiere software engineering student organization.
             </p>
