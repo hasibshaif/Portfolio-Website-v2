@@ -60,8 +60,6 @@ export function Skills() {
       skills: [
         { name: "Pandas", icon: "/icons/skills-icons/pandas-color.svg" },
         { name: "NumPy", icon: "/icons/skills-icons/numpy-color.svg" },
-        { name: "Matplotlib", icon: "/icons/skills-icons/matplotlib-color.svg" },
-        { name: "Seaborn", icon: "/icons/skills-icons/seaborn-color.svg" },
         { name: "Jupyter", icon: "/icons/skills-icons/jupyter-color.svg" },
       ],
     },
@@ -76,6 +74,8 @@ export function Skills() {
     {
       title: "Data Visualization",
       skills: [
+        { name: "Matplotlib", icon: "/icons/skills-icons/matplotlib-color.svg" },
+        { name: "Seaborn", icon: "/icons/skills-icons/seaborn-color.svg" },
         { name: "D3.js", icon: "/icons/skills-icons/d3-color.svg" },
         { name: "Tableau", icon: "/icons/skills-icons/tableau-color.svg" },
         { name: "Power BI", icon: "/icons/skills-icons/powerbi-color.svg" },
