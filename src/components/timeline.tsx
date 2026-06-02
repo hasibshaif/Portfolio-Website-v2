@@ -42,7 +42,7 @@ export function MyTimeline() {
 
   const timelineItems = [
     {
-      title: "May, 2026",
+      title: "June, 2026",
       content: (
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
           <div className="flex flex-col sm:flex-row items-center gap-4">
