@@ -42,6 +42,42 @@ export function MyTimeline() {
 
   const timelineItems = [
     {
+      title: "August, 2026",
+      content: (
+        <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <a
+              href="https://www.accenture.com/us-en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 flex items-center justify-center"
+            >
+              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                <Image
+                  src="/icons/timeline-icons/accenture-logo.png"
+                  alt="Accenture"
+                  width={80}
+                  height={80}
+                  className="object-contain rounded-lg"
+                />
+              </div>
+            </a>
+            <p className="text-white text-sm sm:text-base leading-relaxed flex-1">
+              Concluded internship at {" "}
+              <LinkPreview
+                url="https://www.accenture.com/us-en"
+                isStatic={true}
+                imageSrc="/img/link-previews/timeline/accenture-preview.png"
+                className="text-blue-400 hover:text-blue-300 transition-colors font-medium underline decoration-blue-400/30 hover:decoration-blue-300/50"
+              >
+                  Accenture
+                </LinkPreview>, building end-to-end business-to-tech architecture and integration workflows for an enterprise financial services client, as well as designing an internal AI productivity tool interface.
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "June, 2026",
       content: (
         <div className="mb-6 p-4 rounded-lg bg-white/5 border border-white/10">
